@@ -17,7 +17,7 @@ if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('auth');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -35,7 +35,46 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+// $routes->get('/', 'Home::index');
+$routes->group('/auth', static function ($routes) {
+    $routes->get('/', 'Auth::index');
+    $routes->post('login', 'Auth::login');
+    $routes->get('logout', 'Auth::logout');
+});
+
+$routes->group('/admin', ['filter' => 'authFilter'], static function ($routes) {
+    $routes->get('beranda', 'Admin\Beranda::index');
+    $routes->get('kegiatan', 'Admin\kegiatan::index');
+    $routes->group('komunitas', ['filter' => 'suFilter'], static function ($routes) {
+        $routes->get('/', 'Admin\Komunitas::index');
+        $routes->post('/', 'Admin\Komunitas::save');
+        $routes->get('edit/(:num)', 'Admin\Komunitas::editPage/$1');
+        $routes->put('edit/(:num)', 'Admin\Komunitas::update/$1');
+        $routes->delete('(:num)', 'Admin\Komunitas::delete/$1');
+    });
+
+    $routes->group('jenisKerasulan', ['filter' => 'suFilter'], static function ($routes) {
+        $routes->get('/', 'Admin\JenisKerasulan::index');
+        $routes->get('edit/(:num)', 'Admin\JenisKerasulan::editPage/$1');
+        $routes->put('edit/(:num)', 'Admin\JenisKerasulan::update/$1');
+    });
+
+    $routes->group('tahapPembinaan', ['filter' => 'suFilter'], static function ($routes) {
+        $routes->get('/', 'Admin\TahapPembinaan::index');
+        $routes->get('edit/(:num)', 'Admin\TahapPembinaan::editPage/$1');
+        $routes->put('edit/(:num)', 'Admin\TahapPembinaan::update/$1');
+    });
+
+    $routes->group('anggota', static function ($routes) {
+        $routes->get('(:num)', 'Admin\Anggota::index/$1');
+        $routes->post('(:num)', 'Admin\Anggota::index/$1');
+        $routes->get('edit/(:num)', 'Admin\TahapPembinaan::editPage/$1');
+        $routes->put('edit/(:num)', 'Admin\TahapPembinaan::update/$1');
+        $routes->delete('(:num)', 'Admin\Anggota::delete/$1');
+    });
+});
+
+// group anggota
 
 /*
  * --------------------------------------------------------------------

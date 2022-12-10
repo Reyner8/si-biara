@@ -1,0 +1,20 @@
+CRITICAL - 2022-12-01 06:31:45 --> syntax error, unexpected 'throw' (T_THROW), expecting ';'
+in APPPATH\Filters\SuFilter.php on line 19.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Filters\\SuFilter.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Filters\\SuFilter')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Filters\\SuFilter')
+ 4 SYSTEMPATH\Filters\Filters.php(166): spl_autoload_call('App\\Filters\\SuFilter')
+ 5 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Filters\Filters->run('admin/komunitas', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-01 06:31:57 --> syntax error, unexpected 'throw' (T_THROW), expecting ';'
+in APPPATH\Filters\SuFilter.php on line 19.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Filters\\SuFilter.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Filters\\SuFilter')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Filters\\SuFilter')
+ 4 SYSTEMPATH\Filters\Filters.php(166): spl_autoload_call('App\\Filters\\SuFilter')
+ 5 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Filters\Filters->run('admin/komunitas', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

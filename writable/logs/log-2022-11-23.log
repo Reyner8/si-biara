@@ -1,0 +1,15 @@
+CRITICAL - 2022-11-23 04:16:23 --> Invalid file: admin/layouts/footer.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/layouts/footer.php')
+ 2 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('admin/layouts/footer', null, true)
+ 3 APPPATH\Views\admin\layouts\default.php(18): CodeIgniter\View\View->include('admin/layouts/footer')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\layouts\\default.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('admin/layouts/default', [], true)
+ 7 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/beranda', [], true)
+ 8 APPPATH\Controllers\Admin\Beranda.php(13): view('admin/beranda', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Beranda->index()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

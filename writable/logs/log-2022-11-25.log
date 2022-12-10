@@ -1,0 +1,23 @@
+CRITICAL - 2022-11-25 09:39:34 --> Undefined variable: validation
+in APPPATH\Views\admin\komunitas.php on line 15.
+ 1 APPPATH\Views\admin\komunitas.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: validation', 'APPPATH\\Views\\admin\\komunitas.php', 15, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\komunitas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/komunitas', [], true)
+ 5 APPPATH\Controllers\Admin\Komunitas.php(19): view('admin/komunitas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Komunitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Komunitas))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-25 09:40:30 --> Call to undefined method Config\Validation::getError()
+in APPPATH\Views\admin\komunitas.php on line 15.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/komunitas', [], true)
+ 4 APPPATH\Controllers\Admin\Komunitas.php(19): view('admin/komunitas', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Komunitas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Komunitas))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
