@@ -1,0 +1,17 @@
+CRITICAL - 2022-12-06 06:49:49 --> Cannot use object of type App\Models\AnggotaModel as array
+in APPPATH\Controllers\Auth.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->login()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 06:54:10 --> Invalid file: superuser/beranda.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('superuser/beranda.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superuser/beranda', [], true)
+ 3 APPPATH\Controllers\Superuser\Beranda.php(13): view('superuser/beranda', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\superuser\Beranda->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\superuser\Beranda))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

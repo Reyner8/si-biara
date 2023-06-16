@@ -1,0 +1,12 @@
+CRITICAL - 2023-02-21 06:31:28 --> Undefined variable: j
+in APPPATH\Views\superadmin\anggota.php on line 271.
+ 1 APPPATH\Views\superadmin\anggota.php(271): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: j', 'APPPATH\\Views\\superadmin\\anggota.php', 271, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/anggota', [], true)
+ 5 APPPATH\Controllers\SuperAdmin\Anggota.php(39): view('superadmin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -1,0 +1,507 @@
+ERROR - 2022-12-31 09:04:35 --> mysqli_sql_exception: Unknown column 'anggota.status' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `p`.*, `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.*, `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.*, `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `p`.*, `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\SuperAdmin\Anggota.php(24): App\Models\RelationTable->getAnggotaByCondition('3')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(889): App\Controllers\SuperAdmin\Anggota->__construct()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-31 09:04:35 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 48.
+ 1 APPPATH\Controllers\SuperAdmin\Anggota.php(24): App\Models\RelationTable->getAnggotaByCondition('3')
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\SuperAdmin\Anggota->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 09:06:24 --> mysqli_sql_exception: Unknown column 'anggota.status' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `p`.*, `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.*, `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.*, `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `p`.*, `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\SuperAdmin\Anggota.php(24): App\Models\RelationTable->getAnggotaByCondition('3')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(889): App\Controllers\SuperAdmin\Anggota->__construct()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-31 09:06:24 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 48.
+ 1 APPPATH\Controllers\SuperAdmin\Anggota.php(24): App\Models\RelationTable->getAnggotaByCondition('3')
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\SuperAdmin\Anggota->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 09:06:50 --> mysqli_sql_exception: Unknown column 'anggota.status' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `p`.*, `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.*, `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.*, `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `p`.*, `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\SuperAdmin\Anggota.php(24): App\Models\RelationTable->getAnggotaByCondition('3')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(889): App\Controllers\SuperAdmin\Anggota->__construct()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-31 09:06:50 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 48.
+ 1 APPPATH\Controllers\SuperAdmin\Anggota.php(24): App\Models\RelationTable->getAnggotaByCondition('3')
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\SuperAdmin\Anggota->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 09:07:11 --> mysqli_sql_exception: Unknown column 'anggota.status' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `p`.*, `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.*, `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.*, `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `p`.*, `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\SuperAdmin\Anggota.php(24): App\Models\RelationTable->getAnggotaByCondition('3')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(889): App\Controllers\SuperAdmin\Anggota->__construct()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-31 09:07:11 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 48.
+ 1 APPPATH\Controllers\SuperAdmin\Anggota.php(24): App\Models\RelationTable->getAnggotaByCondition('3')
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\SuperAdmin\Anggota->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 09:22:09 --> mysqli_sql_exception: Unknown column 'anggota.status' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `p`.*, `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.*, `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.*, `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `p`.*, `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(24): App\Models\RelationTable->getAnggotaByCondition('3')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(889): App\Controllers\Admin\Anggota->__construct()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-31 09:22:09 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 48.
+ 1 APPPATH\Controllers\Admin\Anggota.php(24): App\Models\RelationTable->getAnggotaByCondition('3')
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Admin\Anggota->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 09:23:51 --> mysqli_sql_exception: Unknown column 'anggota.status' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `p`.*, `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.*, `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.*, `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `p`.*, `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(61): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(34): App\Models\RelationTable->getAnggotaByKomunitas('3')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-31 09:23:51 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 61.
+ 1 APPPATH\Controllers\Admin\Anggota.php(34): App\Models\RelationTable->getAnggotaByKomunitas('3')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 09:27:13 --> mysqli_sql_exception: Unknown column 'anggota.status' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `p`.*, `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.*, `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.*, `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `p`.*, `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(34): App\Models\RelationTable->getAnggotaByKomunitas('3')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-31 09:27:13 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 36.
+ 1 APPPATH\Controllers\Admin\Anggota.php(34): App\Models\RelationTable->getAnggotaByKomunitas('3')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 09:28:29 --> mysqli_sql_exception: Unknown column 'komunitas.nama' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `p`.*, `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.*, `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.*, `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `p`.*, `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(34): App\Models\RelationTable->getAnggotaByKomunitas('3')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-31 09:28:29 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 36.
+ 1 APPPATH\Controllers\Admin\Anggota.php(34): App\Models\RelationTable->getAnggotaByKomunitas('3')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 09:28:37 --> mysqli_sql_exception: Unknown column 'komunitas.nama' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `p`.*, `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.*, `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.*, `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `p`.*, `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(34): App\Models\RelationTable->getAnggotaByKomunitas('3')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-31 09:28:37 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 36.
+ 1 APPPATH\Controllers\Admin\Anggota.php(34): App\Models\RelationTable->getAnggotaByKomunitas('3')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 09:30:58 --> mysqli_sql_exception: Unknown column 'anggota.status' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `p`.*, `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.*, `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.*, `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `p`.*, `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(34): App\Models\RelationTable->getAnggotaByKomunitas('3')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-31 09:30:58 --> Invalid argument supplied for foreach()
+in APPPATH\Views\admin\anggota.php on line 38.
+ 1 APPPATH\Views\admin\anggota.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Views\\admin\\anggota.php', 38, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/anggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(32): view('admin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 09:31:25 --> mysqli_sql_exception: Unknown column 'anggota.status' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `p`.*, `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.*, `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.*, `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `p`.*, `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(30): App\Models\RelationTable->getAnggotaByKomunitas('3')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-12-31 09:31:50 --> mysqli_sql_exception: Unknown column 'anggota.status' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `p`.*, `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.*, `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.*, `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `p`.*, `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(30): App\Models\RelationTable->getAnggotaByKomunitas('3')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-31 09:31:50 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 36.
+ 1 APPPATH\Controllers\Admin\Anggota.php(30): App\Models\RelationTable->getAnggotaByKomunitas('3')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 09:34:20 --> mysqli_sql_exception: Unknown column 'anggota.status' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `komunit...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `komunit...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `komunit...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `komunit...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(30): App\Models\RelationTable->getAnggotaByKomunitas('3')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-31 09:34:20 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 36.
+ 1 APPPATH\Controllers\Admin\Anggota.php(30): App\Models\RelationTable->getAnggotaByKomunitas('3')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 19:08:20 --> mysqli_sql_exception: Unknown column 'penugasan.idKomunitas' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM \r...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \r...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \r...')
+#3 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(44): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \r...')
+#4 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(30): App\Models\RelationTable->getAnggotaByKomunitas('5')
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-31 19:08:20 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 44.
+ 1 APPPATH\Controllers\Admin\Anggota.php(30): App\Models\RelationTable->getAnggotaByKomunitas('5')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 19:08:32 --> mysqli_sql_exception: Unknown column 'penugasan.idKomunitas' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM \r...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \r...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \r...')
+#3 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(44): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \r...')
+#4 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(30): App\Models\RelationTable->getAnggotaByKomunitas('5')
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-31 19:08:32 --> Call to a member function get() on bool
+in APPPATH\Models\RelationTable.php on line 44.
+ 1 APPPATH\Controllers\Admin\Anggota.php(30): App\Models\RelationTable->getAnggotaByKomunitas('5')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 19:09:28 --> mysqli_sql_exception: Unknown column 'penugasan.idKomunitas' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM \r...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \r...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \r...')
+#3 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(44): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \r...')
+#4 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(30): App\Models\RelationTable->getAnggotaByKomunitas('5')
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-31 19:09:28 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 44.
+ 1 APPPATH\Controllers\Admin\Anggota.php(30): App\Models\RelationTable->getAnggotaByKomunitas('5')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 19:09:44 --> mysqli_sql_exception: Unknown column 'penugasan.idKomunitas' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM \r...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \r...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \r...')
+#3 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(44): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \r...')
+#4 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(30): App\Models\RelationTable->getAnggotaByKomunitas('5')
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-31 19:09:44 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 44.
+ 1 APPPATH\Controllers\Admin\Anggota.php(30): App\Models\RelationTable->getAnggotaByKomunitas('5')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 19:10:08 --> mysqli_sql_exception: Unknown column 'penugasan.idKomunitas' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM \r...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \r...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \r...')
+#3 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(44): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \r...')
+#4 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(35): App\Models\RelationTable->getAnggotaByKomunitas('5')
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-31 19:10:08 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 44.
+ 1 APPPATH\Controllers\Admin\Anggota.php(35): App\Models\RelationTable->getAnggotaByKomunitas('5')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 19:11:53 --> Undefined index: namaAnggota
+in APPPATH\Views\admin\anggota.php on line 41.
+ 1 APPPATH\Views\admin\anggota.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: namaAnggota', 'APPPATH\\Views\\admin\\anggota.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/anggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(32): view('admin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 19:14:12 --> Undefined index: namaKomunitas
+in APPPATH\Views\admin\anggota.php on line 42.
+ 1 APPPATH\Views\admin\anggota.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: namaKomunitas', 'APPPATH\\Views\\admin\\anggota.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/anggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(32): view('admin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 19:14:40 --> Undefined index: status
+in APPPATH\Views\admin\anggota.php on line 43.
+ 1 APPPATH\Views\admin\anggota.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: status', 'APPPATH\\Views\\admin\\anggota.php', 43, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/anggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(32): view('admin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 19:15:04 --> Undefined index: namaAnggota
+in APPPATH\Views\admin\anggota.php on line 75.
+ 1 APPPATH\Views\admin\anggota.php(75): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: namaAnggota', 'APPPATH\\Views\\admin\\anggota.php', 75, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/anggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(32): view('admin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 19:16:48 --> Undefined index: status
+in APPPATH\Views\admin\anggota.php on line 90.
+ 1 APPPATH\Views\admin\anggota.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: status', 'APPPATH\\Views\\admin\\anggota.php', 90, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/anggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(31): view('admin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 19:17:18 --> Undefined variable: riwayatPenugasan
+in APPPATH\Views\admin\anggota.php on line 91.
+ 1 APPPATH\Views\admin\anggota.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: riwayatPenugasan', 'APPPATH\\Views\\admin\\anggota.php', 91, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/anggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(31): view('admin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 19:18:54 --> Undefined index: nama
+in APPPATH\Views\admin\anggota.php on line 95.
+ 1 APPPATH\Views\admin\anggota.php(95): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama', 'APPPATH\\Views\\admin\\anggota.php', 95, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/anggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(31): view('admin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 19:59:29 --> Undefined variable: modal
+in APPPATH\Views\admin\anggota.php on line 65.
+ 1 APPPATH\Views\admin\anggota.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: modal', 'APPPATH\\Views\\admin\\anggota.php', 65, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/anggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(31): view('admin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 20:00:23 --> Undefined variable: modal
+in APPPATH\Views\admin\anggota.php on line 65.
+ 1 APPPATH\Views\admin\anggota.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: modal', 'APPPATH\\Views\\admin\\anggota.php', 65, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/anggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(31): view('admin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 20:00:30 --> Undefined variable: modal
+in APPPATH\Views\admin\anggota.php on line 65.
+ 1 APPPATH\Views\admin\anggota.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: modal', 'APPPATH\\Views\\admin\\anggota.php', 65, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/anggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(31): view('admin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -1,0 +1,220 @@
+CRITICAL - 2022-12-20 17:56:05 --> syntax error, unexpected ']', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+in APPPATH\Controllers\Admin\Penugasan.php on line 30.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\Penugasan.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\Penugasan')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\Penugasan')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin\\Penugasan')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Admin\\Penugasan', true)
+ 6 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 17:56:15 --> syntax error, unexpected ']', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+in APPPATH\Controllers\Admin\Penugasan.php on line 30.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\Penugasan.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\Penugasan')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\Penugasan')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin\\Penugasan')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Admin\\Penugasan', true)
+ 6 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 18:00:30 --> Invalid file: admin/penugasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/penugasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/penugasan', [], true)
+ 3 APPPATH\Controllers\Admin\Penugasan.php(21): view('admin/penugasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 18:07:36 --> Invalid file: admin/penugasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/penugasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/penugasan', [], true)
+ 3 APPPATH\Controllers\Admin\Penugasan.php(22): view('admin/penugasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 18:07:51 --> Invalid file: admin/penugasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/penugasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/penugasan', [], true)
+ 3 APPPATH\Controllers\Admin\Penugasan.php(22): view('admin/penugasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 18:53:18 --> Undefined variable: listGaleri
+in APPPATH\Views\admin\penugasan.php on line 39.
+ 1 APPPATH\Views\admin\penugasan.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: listGaleri', 'APPPATH\\Views\\admin\\penugasan.php', 39, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\penugasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/penugasan', [], true)
+ 5 APPPATH\Controllers\Admin\Penugasan.php(22): view('admin/penugasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 19:19:56 --> Undefined variable: listGaleri
+in APPPATH\Views\admin\penugasan.php on line 39.
+ 1 APPPATH\Views\admin\penugasan.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: listGaleri', 'APPPATH\\Views\\admin\\penugasan.php', 39, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\penugasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/penugasan', [], true)
+ 5 APPPATH\Controllers\Admin\Penugasan.php(22): view('admin/penugasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 21:01:37 --> mysqli_sql_exception: Not unique table/alias: 'penugasan' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Penugasan.php(20): App\Models\RelationTable->getAnggota()
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-20 21:01:37 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 21.
+ 1 APPPATH\Controllers\Admin\Penugasan.php(20): App\Models\RelationTable->getAnggota()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 21:03:00 --> mysqli_sql_exception: Not unique table/alias: 'penugasan' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Penugasan.php(20): App\Models\RelationTable->getAnggota()
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-20 21:03:00 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 21.
+ 1 APPPATH\Controllers\Admin\Penugasan.php(20): App\Models\RelationTable->getAnggota()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 21:06:23 --> mysqli_sql_exception: Unknown column 'penugasan.idKomunitas' in 'on clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Penugasan.php(20): App\Models\RelationTable->getAnggota()
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-20 21:06:23 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 21.
+ 1 APPPATH\Controllers\Admin\Penugasan.php(20): App\Models\RelationTable->getAnggota()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 21:06:46 --> mysqli_sql_exception: Unknown column 'p.idKomunitas' in 'on clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Penugasan.php(20): App\Models\RelationTable->getAnggota()
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-20 21:06:46 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 21.
+ 1 APPPATH\Controllers\Admin\Penugasan.php(20): App\Models\RelationTable->getAnggota()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 21:11:10 --> mysqli_sql_exception: Unknown table 'si-biara.penugasan' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `penugas...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penugas...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penugas...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `penugas...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Penugasan.php(20): App\Models\RelationTable->getAnggota()
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-20 21:11:10 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 23.
+ 1 APPPATH\Controllers\Admin\Penugasan.php(20): App\Models\RelationTable->getAnggota()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 21:11:28 --> mysqli_sql_exception: Unknown table 'si-biara.penugasan' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `penugas...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penugas...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penugas...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `penugas...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Penugasan.php(20): App\Models\RelationTable->getAnggota()
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-20 21:11:28 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 23.
+ 1 APPPATH\Controllers\Admin\Penugasan.php(20): App\Models\RelationTable->getAnggota()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 21:26:19 --> Undefined variable: galeri
+in APPPATH\Views\admin\penugasan.php on line 47.
+ 1 APPPATH\Views\admin\penugasan.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: galeri', 'APPPATH\\Views\\admin\\penugasan.php', 47, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\penugasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/penugasan', [], true)
+ 5 APPPATH\Controllers\Admin\Penugasan.php(23): view('admin/penugasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Penugasan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Penugasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

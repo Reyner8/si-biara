@@ -1,0 +1,12 @@
+CRITICAL - 2023-01-01 04:54:08 --> Undefined variable: nomorBaju
+in APPPATH\Views\admin\anggota.php on line 77.
+ 1 APPPATH\Views\admin\anggota.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: nomorBaju', 'APPPATH\\Views\\admin\\anggota.php', 77, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/anggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(31): view('admin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

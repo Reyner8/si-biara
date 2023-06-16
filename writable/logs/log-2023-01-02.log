@@ -1,0 +1,7 @@
+CRITICAL - 2023-01-02 17:54:59 --> Call to a member function getInsertID() on int
+in APPPATH\Controllers\Admin\Anggota.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->save()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

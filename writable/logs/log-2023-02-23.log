@@ -1,0 +1,36 @@
+CRITICAL - 2023-02-23 05:30:37 --> syntax error, unexpected 'class' (T_CLASS), expecting ';' or ','
+in APPPATH\Views\beranda.php on line 60.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('beranda', [], true)
+ 3 APPPATH\Controllers\Beranda.php(23): view('beranda', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Beranda->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Beranda))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 05:37:31 --> strpos(): Offset not contained in string
+in APPPATH\Views\beranda.php on line 60.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'strpos(): Offset not contained in string', 'APPPATH\\Views\\beranda.php', 60, [...])
+ 2 APPPATH\Views\beranda.php(60): strpos('Deskripsi', ' ', 200)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\beranda.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('beranda', [], true)
+ 6 APPPATH\Controllers\Beranda.php(23): view('beranda', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Beranda->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Beranda))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 05:37:53 --> strpos(): Offset not contained in string
+in APPPATH\Views\beranda.php on line 60.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'strpos(): Offset not contained in string', 'APPPATH\\Views\\beranda.php', 60, [...])
+ 2 APPPATH\Views\beranda.php(60): strpos('Deskripsi', ' ', 200)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\beranda.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('beranda', [], true)
+ 6 APPPATH\Controllers\Beranda.php(23): view('beranda', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Beranda->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Beranda))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

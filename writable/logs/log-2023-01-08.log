@@ -1,0 +1,422 @@
+ERROR - 2023-01-08 01:10:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND `penugasan`.`idAnggota` = '2'' at line 9 in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `penugas...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penugas...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penugas...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `penugas...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(86): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('2')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('2')
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-08 01:10:00 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 86.
+ 1 APPPATH\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('2')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('2')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 01:11:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 8 in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `penugas...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penugas...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penugas...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `penugas...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(86): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('2')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('2')
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-08 01:11:06 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 86.
+ 1 APPPATH\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('2')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('2')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 01:12:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND `pembinaan`.`tanggalPembinaan` = (SELECT MAX(tanggalPembinaan) FROM pembi...' at line 8 in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `penugas...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penugas...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penugas...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `penugas...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(86): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('23')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-08 01:12:36 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 86.
+ 1 APPPATH\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('23')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 01:13:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND `pembinaan`.`tanggalPembinaan` = (SELECT MAX(tanggalPembinaan) FROM pembi...' at line 7 in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `penugas...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penugas...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penugas...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `penugas...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('23')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-08 01:13:03 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 85.
+ 1 APPPATH\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('23')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 01:14:18 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND `pembinaan`.`tanggalPembinaan` = (SELECT MAX(tanggalPembinaan) FROM pembi...' at line 7 in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `penugas...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penugas...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penugas...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `penugas...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('23')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-08 01:14:18 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 85.
+ 1 APPPATH\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('23')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 01:14:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND `pembinaan`.`tanggalPembinaan` = (SELECT MAX(tanggalPembinaan) FROM pembi...' at line 7 in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `penugas...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penugas...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penugas...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `penugas...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('23')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-08 01:14:35 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 85.
+ 1 APPPATH\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('23')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 01:15:22 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND `pembinaan`.`tanggalPembinaan` = (SELECT MAX(tanggalPembinaan) FROM pembi...' at line 8 in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `penugas...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penugas...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penugas...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `penugas...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(86): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('23')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-08 01:15:22 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 86.
+ 1 APPPATH\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('23')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 01:51:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND `pembinaan`.`tanggalPembinaan` = (SELECT MAX(tanggalPembinaan) FROM pembi...' at line 8 in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `penugas...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penugas...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penugas...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `penugas...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(86): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('23')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-08 01:51:37 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 86.
+ 1 APPPATH\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('23')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 01:52:04 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Models\RelationTable.php on line 89.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\RelationTable.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\RelationTable')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\RelationTable')
+ 4 APPPATH\Controllers\Admin\Anggota.php(17): spl_autoload_call('App\\Models\\RelationTable')
+ 5 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Admin\Anggota->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 01:52:22 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Models\RelationTable.php on line 88.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\RelationTable.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\RelationTable')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\RelationTable')
+ 4 APPPATH\Controllers\Admin\Anggota.php(17): spl_autoload_call('App\\Models\\RelationTable')
+ 5 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Admin\Anggota->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 01:54:17 --> syntax error, unexpected '?>', expecting variable (T_VARIABLE) or '{' or '$'
+in APPPATH\Views\admin\detailAnggota.php on line 56.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/detailAnggota', [], true)
+ 3 APPPATH\Controllers\Admin\Anggota.php(161): view('admin/detailAnggota', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 01:57:18 --> Undefined index: nama
+in APPPATH\Views\admin\detailAnggota.php on line 27.
+ 1 APPPATH\Views\admin\detailAnggota.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama', 'APPPATH\\Views\\admin\\detailAnggota.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\detailAnggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/detailAnggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(161): view('admin/detailAnggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 02:01:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`penugasan`.`tanggalPenugasan`, `penugasan`.`keterangan` AS `keteranganPenuga...' at line 1 in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `anggota...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `anggota...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `anggota...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `anggota...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(86): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(161): App\Models\RelationTable->getAnggotaById('23')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-08 02:01:21 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\RelationTable.php on line 86.
+ 1 APPPATH\Controllers\Admin\Anggota.php(161): App\Models\RelationTable->getAnggotaById('23')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 02:01:46 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`penugasan`.`tanggalPenugasan`, `penugasan`.`keterangan` AS `keteranganPenuga...' at line 1 in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `anggota...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `anggota...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `anggota...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `anggota...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(161): App\Models\RelationTable->getAnggotaById('23')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-08 02:01:46 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\RelationTable.php on line 85.
+ 1 APPPATH\Controllers\Admin\Anggota.php(161): App\Models\RelationTable->getAnggotaById('23')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 02:02:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`penugasan`.`tanggalPenugasan`, `penugasan`.`keterangan` AS `keteranganPenuga...' at line 1 in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `anggota...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `anggota...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `anggota...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `anggota...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(161): App\Models\RelationTable->getAnggotaById('23')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-08 02:02:01 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\RelationTable.php on line 85.
+ 1 APPPATH\Controllers\Admin\Anggota.php(161): App\Models\RelationTable->getAnggotaById('23')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 02:02:47 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`penugasan`.`tanggalPenugasan`, `penugasan`.`keterangan` AS `keteranganPenuga...' at line 1 in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `anggota...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `anggota...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `anggota...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `anggota...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(161): App\Models\RelationTable->getAnggotaById('23')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-08 02:02:47 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\RelationTable.php on line 85.
+ 1 APPPATH\Controllers\Admin\Anggota.php(161): App\Models\RelationTable->getAnggotaById('23')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 02:02:59 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`penugasan`.`tanggalPenugasan`, `penugasan`.`keterangan` AS `keteranganPenuga...' at line 1 in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `anggota...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `anggota...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `anggota...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `anggota...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(161): App\Models\RelationTable->getAnggotaById('23')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-08 02:02:59 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 85.
+ 1 APPPATH\Controllers\Admin\Anggota.php(161): App\Models\RelationTable->getAnggotaById('23')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 02:03:20 --> Undefined index: keterangan
+in APPPATH\Views\admin\detailAnggota.php on line 57.
+ 1 APPPATH\Views\admin\detailAnggota.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: keterangan', 'APPPATH\\Views\\admin\\detailAnggota.php', 57, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\detailAnggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/detailAnggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(161): view('admin/detailAnggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 02:03:29 --> Undefined variable: listAnggota
+in APPPATH\Views\admin\detailAnggota.php on line 82.
+ 1 APPPATH\Views\admin\detailAnggota.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: listAnggota', 'APPPATH\\Views\\admin\\detailAnggota.php', 82, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\detailAnggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/detailAnggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(161): view('admin/detailAnggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('23')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 05:52:22 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\detailAnggota.php on line 27.
+ 1 APPPATH\Views\admin\detailAnggota.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\detailAnggota.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\detailAnggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/detailAnggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(161): view('admin/detailAnggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('2')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-08 05:52:37 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\detailAnggota.php on line 27.
+ 1 APPPATH\Views\admin\detailAnggota.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\detailAnggota.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\detailAnggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/detailAnggota', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(162): view('admin/detailAnggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('2')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 06:15:57 --> mysqli_sql_exception: Unknown column 'anggota.idAnggota' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `anggota...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `anggota...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `anggota...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `anggota...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(86): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('2')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('2')
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-08 06:15:57 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\RelationTable.php on line 86.
+ 1 APPPATH\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('2')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('2')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-08 06:17:39 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`tanggalPenugasan`, `penugasan`.`keterangan` AS `keteranganPenugasan`, `penu...' at line 1 in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `anggota...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `anggota...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `anggota...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `anggota...', Array, false)
+#4 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(86): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('2')
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('2')
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-08 06:17:39 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\RelationTable.php on line 86.
+ 1 APPPATH\Controllers\Admin\Anggota.php(156): App\Models\RelationTable->getAnggotaById('2')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->detail('2')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -1,0 +1,30 @@
+CRITICAL - 2023-02-12 09:15:39 --> Invalid file: sa/tahapPembinaan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sa/tahapPembinaan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('sa/tahapPembinaan', [], true)
+ 3 APPPATH\Controllers\SuperAdmin\TahapPembinaan.php(19): view('sa/tahapPembinaan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\TahapPembinaan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\TahapPembinaan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-12 09:15:43 --> Invalid file: sa/tahapPembinaan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sa/tahapPembinaan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('sa/tahapPembinaan', [], true)
+ 3 APPPATH\Controllers\SuperAdmin\TahapPembinaan.php(19): view('sa/tahapPembinaan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\TahapPembinaan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\TahapPembinaan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-12 21:08:47 --> Invalid file: superadmin/suratMasuk.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('superadmin/suratMasuk.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/suratMasuk', [], true)
+ 3 APPPATH\Controllers\SuperAdmin\Surat.php(23): view('superadmin/suratMasuk', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Surat->suratMasuk()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Surat))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

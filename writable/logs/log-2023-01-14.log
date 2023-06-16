@@ -1,0 +1,14 @@
+CRITICAL - 2023-01-14 19:59:16 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Admin\Kegiatan.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Kegiatan->save()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kegiatan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-14 20:00:45 --> Call to a member function getName() on null
+in APPPATH\Controllers\Admin\Kegiatan.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Kegiatan->save()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kegiatan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

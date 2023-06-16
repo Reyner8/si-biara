@@ -1,0 +1,42 @@
+CRITICAL - 2023-02-16 20:40:45 --> Undefined variable: listKomunitas
+in APPPATH\Views\superadmin\kerasulan.php on line 57.
+ 1 APPPATH\Views\superadmin\kerasulan.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: listKomunitas', 'APPPATH\\Views\\superadmin\\kerasulan.php', 57, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\kerasulan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/kerasulan', [], true)
+ 5 APPPATH\Controllers\SuperAdmin\Kerasulan.php(24): view('superadmin/kerasulan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Kerasulan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Kerasulan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 22:22:17 --> Invalid file: sa/jenisKerasulan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sa/jenisKerasulan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('sa/jenisKerasulan', [], true)
+ 3 APPPATH\Controllers\SuperAdmin\JenisKerasulan.php(19): view('sa/jenisKerasulan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\JenisKerasulan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\JenisKerasulan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 22:22:37 --> Invalid file: sa/jenisKerasulan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sa/jenisKerasulan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('sa/jenisKerasulan', [], true)
+ 3 APPPATH\Controllers\SuperAdmin\JenisKerasulan.php(19): view('sa/jenisKerasulan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\JenisKerasulan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\JenisKerasulan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 22:40:43 --> Invalid file: sa/jenisKerasulan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sa/jenisKerasulan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('sa/jenisKerasulan', [], true)
+ 3 APPPATH\Controllers\SuperAdmin\JenisKerasulan.php(19): view('sa/jenisKerasulan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\JenisKerasulan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\JenisKerasulan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

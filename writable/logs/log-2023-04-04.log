@@ -1,0 +1,19 @@
+CRITICAL - 2023-04-04 22:03:28 --> Trying to access array offset on value of type null
+in APPPATH\Views\superadmin\about.php on line 23.
+ 1 APPPATH\Views\superadmin\about.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\superadmin\\about.php', 23, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\about.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/about', [], true)
+ 5 APPPATH\Controllers\SuperAdmin\About.php(24): view('superadmin/about', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\About->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\About))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-04 23:21:10 --> Call to a member function find() on null
+in APPPATH\Controllers\SuperAdmin\About.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\About->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\About))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

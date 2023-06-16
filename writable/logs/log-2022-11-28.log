@@ -1,0 +1,106 @@
+CRITICAL - 2022-11-28 05:19:06 --> Undefined property: App\Controllers\Admin\JenisKerasulan::$JenisKerasulaModel
+in APPPATH\Controllers\Admin\JenisKerasulan.php on line 21.
+ 1 APPPATH\Controllers\Admin\JenisKerasulan.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Admin\\JenisKerasulan::$JenisKerasulaModel', 'APPPATH\\Controllers\\Admin\\JenisKerasulan.php', 21, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\JenisKerasulan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JenisKerasulan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 05:20:05 --> Undefined variable: isEdit
+in APPPATH\Views\admin\jenisKerasulan.php on line 22.
+ 1 APPPATH\Views\admin\jenisKerasulan.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: isEdit', 'APPPATH\\Views\\admin\\jenisKerasulan.php', 22, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\jenisKerasulan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/jenisKerasulan', [], true)
+ 5 APPPATH\Controllers\Admin\JenisKerasulan.php(21): view('admin/jenisKerasulan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\JenisKerasulan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JenisKerasulan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 05:24:58 --> Undefined variable: listJenisKerasulan
+in APPPATH\Views\admin\jenisKerasulan.php on line 77.
+ 1 APPPATH\Views\admin\jenisKerasulan.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: listJenisKerasulan', 'APPPATH\\Views\\admin\\jenisKerasulan.php', 77, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\jenisKerasulan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/jenisKerasulan', [], true)
+ 5 APPPATH\Controllers\Admin\JenisKerasulan.php(19): view('admin/jenisKerasulan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\JenisKerasulan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JenisKerasulan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 05:26:36 --> Undefined variable: komunitas
+in APPPATH\Views\admin\jenisKerasulan.php on line 79.
+ 1 APPPATH\Views\admin\jenisKerasulan.php(79): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: komunitas', 'APPPATH\\Views\\admin\\jenisKerasulan.php', 79, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\jenisKerasulan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/jenisKerasulan', [], true)
+ 5 APPPATH\Controllers\Admin\JenisKerasulan.php(19): view('admin/jenisKerasulan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\JenisKerasulan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JenisKerasulan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 05:27:39 --> Undefined index: ket
+in APPPATH\Views\admin\jenisKerasulan.php on line 80.
+ 1 APPPATH\Views\admin\jenisKerasulan.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: ket', 'APPPATH\\Views\\admin\\jenisKerasulan.php', 80, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\jenisKerasulan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/jenisKerasulan', [], true)
+ 5 APPPATH\Controllers\Admin\JenisKerasulan.php(19): view('admin/jenisKerasulan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\JenisKerasulan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JenisKerasulan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 05:38:05 --> Undefined property: App\Controllers\Admin\JenisKerasulan::$KomunitasModel
+in APPPATH\Controllers\Admin\JenisKerasulan.php on line 48.
+ 1 APPPATH\Controllers\Admin\JenisKerasulan.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Admin\\JenisKerasulan::$KomunitasModel', 'APPPATH\\Controllers\\Admin\\JenisKerasulan.php', 48, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\JenisKerasulan->update('1')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JenisKerasulan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 05:39:21 --> mysqli_sql_exception: Unknown column 'ket' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `jenisKe...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `jenisKe...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `jenisKe...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `jenisKe...', Array, false)
+#4 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\si-biara\app\Controllers\Admin\JenisKerasulan.php(49): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\JenisKerasulan->update('1')
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JenisKerasulan))
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2022-11-28 05:39:46 --> mysqli_sql_exception: Unknown column 'ket' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `jenisKe...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `jenisKe...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `jenisKe...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `jenisKe...', Array, false)
+#4 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\si-biara\app\Controllers\Admin\JenisKerasulan.php(49): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\JenisKerasulan->update('1')
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JenisKerasulan))
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-11-28 05:40:59 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 867.
+ 1 SYSTEMPATH\BaseModel.php(867): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Admin\JenisKerasulan.php(49): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\JenisKerasulan->update('1')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JenisKerasulan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

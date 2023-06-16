@@ -1,0 +1,48 @@
+CRITICAL - 2023-02-15 00:34:11 --> Undefined index: namaKomunitas
+in APPPATH\Views\superadmin\suratMasuk.php on line 155.
+ 1 APPPATH\Views\superadmin\suratMasuk.php(155): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: namaKomunitas', 'APPPATH\\Views\\superadmin\\suratMasuk.php', 155, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\suratMasuk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/suratMasuk', [], true)
+ 5 APPPATH\Controllers\SuperAdmin\Surat.php(37): view('superadmin/suratMasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Surat->suratMasukEdit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Surat))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-15 09:06:22 --> Undefined variable: newName
+in APPPATH\Controllers\SuperAdmin\Surat.php on line 134.
+ 1 APPPATH\Controllers\SuperAdmin\Surat.php(134): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: newName', 'APPPATH\\Controllers\\SuperAdmin\\Surat.php', 134, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Surat->suratMasukUpdate('3')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Surat))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-15 09:08:03 --> unlink(upload/suratMasuk/): No such file or directory
+in APPPATH\Controllers\SuperAdmin\Surat.php on line 124.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/suratMasuk/): No such file or directory', 'APPPATH\\Controllers\\SuperAdmin\\Surat.php', 124, [...])
+ 2 APPPATH\Controllers\SuperAdmin\Surat.php(124): unlink('upload/suratMasuk/')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Surat->suratMasukUpdate('3')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Surat))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-15 09:08:39 --> unlink(upload/surat/): Is a directory
+in APPPATH\Controllers\SuperAdmin\Surat.php on line 124.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/surat/): Is a directory', 'APPPATH\\Controllers\\SuperAdmin\\Surat.php', 124, [...])
+ 2 APPPATH\Controllers\SuperAdmin\Surat.php(124): unlink('FCPATH\\upload\\surat')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Surat->suratMasukUpdate('3')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Surat))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-15 09:25:29 --> Invalid file: sa/suratKeluar.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sa/suratKeluar.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('sa/suratKeluar', [], true)
+ 3 APPPATH\Controllers\SuperAdmin\Surat.php(156): view('sa/suratKeluar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Surat->suratKeluar()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Surat))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -1,0 +1,101 @@
+CRITICAL - 2023-02-04 05:14:47 --> Undefined variable: newName
+in APPPATH\Controllers\Admin\Surat.php on line 254.
+ 1 APPPATH\Controllers\Admin\Surat.php(254): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: newName', 'APPPATH\\Controllers\\Admin\\Surat.php', 254, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Surat->suratKeluarUpdate('4')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Surat))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:15:28 --> Undefined variable: newName
+in APPPATH\Controllers\Admin\Surat.php on line 255.
+ 1 APPPATH\Controllers\Admin\Surat.php(255): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: newName', 'APPPATH\\Controllers\\Admin\\Surat.php', 255, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Surat->suratKeluarUpdate('4')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Surat))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:16:08 --> Undefined variable: newName
+in APPPATH\Controllers\Admin\Surat.php on line 257.
+ 1 APPPATH\Controllers\Admin\Surat.php(257): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: newName', 'APPPATH\\Controllers\\Admin\\Surat.php', 257, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Surat->suratKeluarUpdate('4')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Surat))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:17:24 --> unlink(upload/suratKeluar/): No such file or directory
+in APPPATH\Controllers\Admin\Surat.php on line 246.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/suratKeluar/): No such file or directory', 'APPPATH\\Controllers\\Admin\\Surat.php', 246, [...])
+ 2 APPPATH\Controllers\Admin\Surat.php(246): unlink('upload/suratKeluar/')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Surat->suratKeluarUpdate('4')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Surat))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:17:53 --> unlink(upload/surat/): Is a directory
+in APPPATH\Controllers\Admin\Surat.php on line 246.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/surat/): Is a directory', 'APPPATH\\Controllers\\Admin\\Surat.php', 246, [...])
+ 2 APPPATH\Controllers\Admin\Surat.php(246): unlink('FCPATH\\upload\\surat')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Surat->suratKeluarUpdate('4')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Surat))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:18:14 --> unlink(upload/surat/): Is a directory
+in APPPATH\Controllers\Admin\Surat.php on line 268.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/surat/): Is a directory', 'APPPATH\\Controllers\\Admin\\Surat.php', 268, [...])
+ 2 APPPATH\Controllers\Admin\Surat.php(268): unlink('FCPATH\\upload\\surat')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Surat->suratKeluarDelete('4')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Surat))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:53:46 --> Undefined variable: newname
+in APPPATH\Controllers\Admin\Surat.php on line 244.
+ 1 APPPATH\Controllers\Admin\Surat.php(244): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: newname', 'APPPATH\\Controllers\\Admin\\Surat.php', 244, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Surat->suratKeluarUpdate('6')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Surat))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 22:17:03 --> syntax error, unexpected '}'
+in APPPATH\Config\Routes.php on line 86.
+ 1 SYSTEMPATH\CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 2 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:17:59 --> Undefined variable: nama
+in APPPATH\Views\admin\profil.php on line 24.
+ 1 APPPATH\Views\admin\profil.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: nama', 'APPPATH\\Views\\admin\\profil.php', 24, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\profil.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/profil', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(290): view('admin/profil', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->profil()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:19:19 --> Undefined index: nama
+in APPPATH\Views\admin\profil.php on line 24.
+ 1 APPPATH\Views\admin\profil.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama', 'APPPATH\\Views\\admin\\profil.php', 24, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\profil.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/profil', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(290): view('admin/profil', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->profil()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 23:19:54 --> Undefined index: nama
+in APPPATH\Views\admin\profil.php on line 24.
+ 1 APPPATH\Views\admin\profil.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama', 'APPPATH\\Views\\admin\\profil.php', 24, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\profil.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/profil', [], true)
+ 5 APPPATH\Controllers\Admin\Anggota.php(290): view('admin/profil', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Anggota->profil()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

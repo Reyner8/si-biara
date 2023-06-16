@@ -1,0 +1,228 @@
+CRITICAL - 2023-01-16 07:07:51 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\detailBeranda.php on line 11.
+ 1 APPPATH\Views\admin\detailBeranda.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\detailBeranda.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\detailBeranda.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/detailBeranda', [], true)
+ 5 APPPATH\Controllers\Admin\Beranda.php(30): view('admin/detailBeranda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('16')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 07:09:38 --> mysqli_sql_exception: Unknown column 'idKegiatan' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Beranda.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('16')
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-01-16 07:09:38 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Admin\Beranda.php(30): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('16')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 07:09:55 --> mysqli_sql_exception: Unknown column 'idKegiatan' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Beranda.php(30): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('16')
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-01-16 07:09:55 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 185.
+ 1 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(false, null)
+ 2 APPPATH\Controllers\Admin\Beranda.php(30): CodeIgniter\BaseModel->find()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('16')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 07:10:07 --> mysqli_sql_exception: Unknown column 'idKegiatan' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Beranda.php(30): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('16')
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-01-16 07:10:07 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 185.
+ 1 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(false, null)
+ 2 APPPATH\Controllers\Admin\Beranda.php(30): CodeIgniter\BaseModel->find()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('16')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 07:17:21 --> mysqli_sql_exception: Unknown column 'idKegiatan' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Beranda.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('16')
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-01-16 07:17:21 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Admin\Beranda.php(30): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('16')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 07:18:09 --> mysqli_sql_exception: Unknown column 'idKegiatan' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Beranda.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('16')
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-01-16 07:18:09 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Admin\Beranda.php(27): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('16')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 07:18:16 --> mysqli_sql_exception: Unknown column 'idKegiatan' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Beranda.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('16')
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-01-16 07:18:16 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Admin\Beranda.php(27): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('16')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 07:57:57 --> mysqli_sql_exception: Unknown column 'idKegiatan' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Beranda.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('17')
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-01-16 07:57:57 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Admin\Beranda.php(30): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('17')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-16 08:01:50 --> mysqli_sql_exception: Unknown column 'idKegiatan' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\si-biara\app\Controllers\Admin\Beranda.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('17')
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-01-16 08:01:50 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Admin\Beranda.php(30): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('17')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:28:58 --> Undefined variable: listKegiatan
+in APPPATH\Views\admin\detailBeranda.php on line 28.
+ 1 APPPATH\Views\admin\detailBeranda.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: listKegiatan', 'APPPATH\\Views\\admin\\detailBeranda.php', 28, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\detailBeranda.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/detailBeranda', [], true)
+ 5 APPPATH\Controllers\Admin\Beranda.php(32): view('admin/detailBeranda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('17')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:35:25 --> Trying to access array offset on value of type int
+in APPPATH\Views\admin\detailBeranda.php on line 11.
+ 1 APPPATH\Views\admin\detailBeranda.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type int', 'APPPATH\\Views\\admin\\detailBeranda.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\detailBeranda.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/detailBeranda', [], true)
+ 5 APPPATH\Controllers\Admin\Beranda.php(32): view('admin/detailBeranda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Beranda->detail('17')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Beranda))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
