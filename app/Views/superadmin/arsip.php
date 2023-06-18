@@ -116,7 +116,7 @@
                     <?php if (session()->get('role') == 'superadmin') : ?>
                         <div class="mb-3">
                             <label for="idProvinsi" class="form-label">Provinsi</label>
-                            <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="idProvinsi">
+                            <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="idProvinsi" disabled>
                                 <option value="<?= $superAdminData['id'] ?>"><?= $superAdminData['nama'] ?></option>
                             </select>
                         </div>
@@ -187,18 +187,20 @@
                             </select>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="idKomunitas" class="form-label">Provinsi</label>
-                            <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="idProvinsi">
-                                <?php foreach ($listProvinsi as $Provinsi) : ?>
-                                    <?php if ($Provinsi['id'] == $arsip['idProvinsi']) : ?>
-                                        <option selected value="<?= $Provinsi['id'] ?>"><?= $Provinsi['nama'] ?></option>
-                                    <?php else : ?>
-                                        <option value="<?= $Provinsi['id'] ?>"><?= $Provinsi['nama'] ?></option>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
+                        <?php if (session()->get('role') == 'superuser') : ?>
+                            <div class="mb-3">
+                                <label for="idKomunitas" class="form-label">Provinsi</label>
+                                <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="idProvinsi">
+                                    <?php foreach ($listProvinsi as $Provinsi) : ?>
+                                        <?php if ($Provinsi['id'] == $arsip['idProvinsi']) : ?>
+                                            <option selected value="<?= $Provinsi['id'] ?>"><?= $Provinsi['nama'] ?></option>
+                                        <?php else : ?>
+                                            <option value="<?= $Provinsi['id'] ?>"><?= $Provinsi['nama'] ?></option>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        <?php endif; ?>
 
                         <?php if (session()->get('role') == 'superadmin') : ?>
                             <div class="mb-3">

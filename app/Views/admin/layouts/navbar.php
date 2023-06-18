@@ -24,17 +24,10 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/admin/kerasulan">Kerasulan</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Surat
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/admin/surat/masuk">Surat Masuk</a></li>
-                            <li><a class="dropdown-item" href="/admin/surat/keluar">Surat Keluar</a></li>
-                            <li><a class="dropdown-item" href="/admin/arsip">Arsip</a></li>
-
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/admin/arsip">Berkas</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/admin/laporan">laporan</a></a>
                     </li>

@@ -44,7 +44,15 @@
                         </tr>
                         <tr>
                             <th>Berkas</th>
-                            <td><a href="/upload/berkas/<?= $anggota['berkasTerkait'] ?>"><?= $anggota['status'] ?></a> </td>
+                            <td>
+                                <?php if ($anggota['berkasTerkait']) : ?>
+                                    <a href="/upload/berkas/<?= $anggota['berkasTerkait'] ?>"><?= $anggota['status'] ?></a>
+                                <?php else : ?>
+                                    <?= 'Belum Ada Berkas' ?>
+                                <?php endif; ?>
+
+
+                            </td>
                         </tr>
                     </table>
                 </div>

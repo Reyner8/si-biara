@@ -29,8 +29,8 @@ class Anggota extends BaseController
     public function index()
     {
         $nomorBajuTerakhir = $this->AnggotaModel->orderBy('nomorBaju', 'DESC')->first();
-        $splitString = explode('-', $nomorBajuTerakhir['nomorBaju']);
-        $nomorBajuBaru = 'B-' . sprintf("%03s", $splitString[1] + 1);
+        // dd($nomorBajuTerakhir['nomorBaju']);
+        $nomorBajuBaru = sprintf("%04s", $nomorBajuTerakhir['nomorBaju'] + 1);
 
         return view('superadmin/anggota', [
             'judul' => 'Keanggotaan',
@@ -47,10 +47,8 @@ class Anggota extends BaseController
     public function save()
     {
         $LastDataAnggota = $this->AnggotaModel->orderBy('nomorBaju', 'DESC')->first();
-        $splitString = explode('-', $LastDataAnggota['nomorBaju']);
-
         $nama = $this->request->getPost('nama');
-        $nomorBaju = 'B-' . sprintf("%03s", $splitString[1] + 1);
+        $nomorBaju = sprintf("%04s", $LastDataAnggota['nomorBaju'] + 1);
         $tempatLahir = $this->request->getPost('tempatLahir');
         $tanggalLahir = $this->request->getPost('tanggalLahir');
         $password = password_hash(strval($tanggalLahir), PASSWORD_BCRYPT);
@@ -94,8 +92,9 @@ class Anggota extends BaseController
             return redirect()->to('sa/anggota')->withInput();
         }
 
-        $getAnggotaByRole = $this->RelationTable->getAnggotaByRoleAndKomunitas($idKomunitas);
-        if ($getAnggotaByRole) {
+        $getAnggotaByRoleAdmin = $this->RelationTable->getAnggotaByRoleKomunitas($idKomunitas, $role);
+        // dd($getAnggotaByRoleAdmin);
+        if ($getAnggotaByRoleAdmin && $getAnggotaByRoleAdmin['role'] != 'user') {
             session()->setFlashdata('msg-danger', 'Kepala komunitas hanya boleh satu!!!');
             return redirect()->to('sa/anggota')->withInput();
         }
@@ -179,11 +178,11 @@ class Anggota extends BaseController
 
         $idKomunitas = $this->RelationTable->getAnggotaByIdAnggota($anggota['id'])['idKomunitas'];
 
-        // $getAnggotaByRole = $this->RelationTable->getAnggotaByRoleAndKomunitas($idKomunitas);
-        // if ($getAnggotaByRole && $role == 'admin') {
-        //     session()->setFlashdata('msg-danger', 'Kepala komunitas hanya boleh satu!!!');
-        //     return redirect()->to('sa/anggota')->withInput();
-        // }
+        $getAnggotaByRole = $this->RelationTable->getAnggotaByRoleAndKomunitas($idKomunitas);
+        if ($getAnggotaByRole && $role == 'admin') {
+            session()->setFlashdata('msg-danger', 'Kepala komunitas hanya boleh satu!!!');
+            return redirect()->to('sa/anggota')->withInput();
+        }
 
         if ($foto == '') {
             $newName = $anggota['foto'];
@@ -202,7 +201,7 @@ class Anggota extends BaseController
         if ($file->isValid() && !$file->hasMoved()) {
             $newName = 'file-' . $file->getRandomName();
             $file->move('upload/berkas', $newName);
-            // unlink('upload/berkas/' . $anggota['berkasTerkait']);
+            unlink('upload/berkas/' . $anggota['berkasTerkait']);
         }
 
         $this->AnggotaModel->update($id, [
@@ -555,7 +554,7 @@ class Anggota extends BaseController
             'universitas' => $universitas,
             'fakultas' => $fakultas,
             'prodi' => $prodi,
-            'status' => $jenjang,
+            'jenjang' => $jenjang,
             'file' => $newName,
         ]);
 

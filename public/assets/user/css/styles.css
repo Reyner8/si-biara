@@ -11333,7 +11333,9 @@ html {
 .drk h1{
   display: block;
   position: absolute;
-  bottom: 80%;
-  left: 20%;
+  text-transform: uppercase;
+  font-weight: bolder;
+  top: 45%;
+  left: 12%;
   z-index: 100;
 }

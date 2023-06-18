@@ -34,7 +34,6 @@
                     <table id="datatable" class="table border-dark">
                         <thead class="text-center">
                             <tr>
-                                <th>Komunitas</th>
                                 <th>Nama</th>
                                 <th>Tanggal</th>
                                 <th>Jenis File</th>
@@ -95,16 +94,8 @@
                             <option selected>Open this select menu</option>
                             <option value="tahunan">Laporan Tahunan</option>
                             <option value="bulanan">Laporan Bulanan</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="idKomunitas" class="form-label">Komunitas</label>
-                        <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="idKomunitas">
-                            <option selected>Open this select menu</option>
-                            <?php foreach ($listKomunitas as $komunitas) : ?>
-                                <option value="<?= $komunitas['id'] ?>"><?= $komunitas['nama'] ?></option>
-                            <?php endforeach; ?>
+                            <option value="surat_masuk">Surat Masuk</option>
+                            <option value="surat_keluar">Surat Keluar</option>
                         </select>
                     </div>
 
@@ -150,22 +141,25 @@
                                 <option selected>Open this select menu</option>
                                 <?php if ($arsip['jenisFile'] == 'tahunan') : ?>
                                     <option value="tahunan" selected>Laporan Tahunan</option>
-                                <?php else : ?>
                                     <option value="bulanan">Laporan Bulanan</option>
+                                    <option value="surat_masuk">Surat Masuk</option>
+                                    <option value="surat_keluar">Surat Keluar</option>
+                                <?php elseif ($arsip['jenisFile'] == 'bulanan') : ?>
+                                    <option value="tahunan">Laporan Tahunan</option>
+                                    <option value="bulanan" selected>Laporan Bulanan</option>
+                                    <option value="surat_masuk">Surat Masuk</option>
+                                    <option value="surat_keluar">Surat Keluar</option>
+                                <?php elseif ($arsip['jenisFile'] == 'surat_masuk') : ?>
+                                    <option value="tahunan">Laporan Tahunan</option>
+                                    <option value="bulanan">Laporan Bulanan</option>
+                                    <option value="surat_masuk" selected>Surat Masuk</option>
+                                    <option value="surat_keluar">Surat Keluar</option>
+                                <?php else : ?>
+                                    <option value="tahunan">Laporan Tahunan</option>
+                                    <option value="bulanan">Laporan Bulanan</option>
+                                    <option value="surat_masuk">Surat Masuk</option>
+                                    <option value="surat_keluar" selected>Surat Keluar</option>
                                 <?php endif; ?>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="idKomunitas" class="form-label">Komunitas</label>
-                            <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="idKomunitas">
-                                <?php foreach ($listKomunitas as $komunitas) : ?>
-                                    <?php if ($komunitas['id'] == $arsip['idKomunitas']) : ?>
-                                        <option selected value="<?= $komunitas['id'] ?>"><?= $komunitas['nama'] ?></option>
-                                    <?php else : ?>
-                                        <option value="<?= $komunitas['id'] ?>"><?= $komunitas['nama'] ?></option>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
                             </select>
                         </div>
 

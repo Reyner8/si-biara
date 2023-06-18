@@ -17,6 +17,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link rel="stylesheet" href="/assets/user/css/custom.css">
     <link rel="stylesheet" href="/assets/user/css/styles.css">
+
 </head>
 
 <body class="d-flex flex-column h-100">

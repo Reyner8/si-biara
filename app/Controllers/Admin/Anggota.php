@@ -30,8 +30,7 @@ class Anggota extends BaseController
     public function index()
     {
         $nomorBajuTerakhir = $this->AnggotaModel->orderBy('nomorBaju', 'DESC')->first();
-        $splitString = explode('-', $nomorBajuTerakhir['nomorBaju']);
-        $nomorBajuBaru = 'B-' . sprintf("%03s", $splitString[1] + 1);
+        $nomorBajuBaru = sprintf("%04s", $nomorBajuTerakhir['nomorBaju'] + 1);
         return view('admin/anggota', [
             'judul' => 'Keanggotaan',
             'nomorBajuBaru' => $nomorBajuBaru,
@@ -47,9 +46,8 @@ class Anggota extends BaseController
     public function save()
     {
         $LastDataAnggota = $this->AnggotaModel->orderBy('nomorBaju', 'DESC')->first();
-        $splitString = explode('-', $LastDataAnggota['nomorBaju']);
 
-        $nomorBaju = 'B-' . sprintf("%03s", $splitString[1] + 1);
+        $nomorBaju = sprintf("%04s", $LastDataAnggota['nomorBaju'] + 1);
         $nama = $this->request->getPost('nama');
         $tempatLahir = $this->request->getPost('tempatLahir');
         $tanggalLahir = $this->request->getPost('tanggalLahir');

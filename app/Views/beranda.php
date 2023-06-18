@@ -6,47 +6,53 @@ $titleCarousel = 'Aplikasi Pengolahan Data Biara';
 $textCarousel = ''; ?>
 <!-- Header-->
 <header class="py-5" style="background-color: #EDEDED;">
+
   <div class="container-fluid px-5">
-    <!-- <div class="row gx-5 align-items-center justify-content-center">
-      <div class="col-lg-8 col-xl-7 col-xxl-6">
-        <div class="my-5 text-center text-xl-start">
-          <h1 class="display-5 fw-bolder text-white mb-2">Kongregasi SJMJ</h1>
-          <p class="lead fw-normal text-white-50 mb-4">Kongregasi Suster-Suster Jesus Maria Joseph</p>
-          <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#tentang">Get Started</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="/assets/user/image/1.jpg" alt="header" /></div>
-    </div> -->
-    <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
       </div>
 
       <div class="carousel-inner">
-
-        <?php foreach ($listGaleri as $key => $galeri) : ?>
-          <?php if ($key == 0) : ?>
-            <div class="carousel-item drk active">
-              <img class="carousel-img" src="/upload/galeri/<?= $galeri['foto'] ?>" class="d-block w-100" alt="<?= $galeri['foto'] ?>">
-              <div class="carousel-caption d-none d-md-block">
-                <h1><?= $titleCarousel ?></h1>
-                <p><?= $textCarousel ?></p>
-              </div>
-            </div>
-          <?php else : ?>
-            <div class="carousel-item drk">
-              <img class="carousel-img" src="/upload/galeri/<?= $galeri['foto'] ?>" class="d-block w-100" alt="<?= $galeri['foto'] ?>">
-              <div class="carousel-caption d-none d-md-block">
-                <h1><?= $titleCarousel ?></h1>
-                <p><?= $textCarousel ?></p>
-              </div>
-            </div>
-          <?php endif; ?>
-        <?php endforeach; ?>
+        <div class="carousel-item drk active">
+          <img class="carousel-img" src="/assets/user/carousel/1.jpg" class="d-block w-100" alt="1">
+          <div class="carousel-caption d-none d-md-block d-flex flex-column justify-content-center h-100" style="top: 0;">
+            <h1><?= $titleCarousel ?></h1>
+            <p><?= $textCarousel ?></p>
+          </div>
+        </div>
+        <div class="carousel-item drk">
+          <img class="carousel-img" src="/assets/user/carousel/2.jpg" class="d-block w-100" alt="2">
+          <div class="carousel-caption d-none d-md-block d-flex flex-column justify-content-center h-100" style="top: 0;">
+            <h1><?= $titleCarousel ?></h1>
+            <p><?= $textCarousel ?></p>
+          </div>
+        </div>
+        <div class="carousel-item drk">
+          <img class="carousel-img" src="/assets/user/carousel/3.jpg" class="d-block w-100" alt="3">
+          <div class="carousel-caption d-none d-md-block d-flex flex-column justify-content-center h-100" style="top: 0;">
+            <h1><?= $titleCarousel ?></h1>
+            <p><?= $textCarousel ?></p>
+          </div>
+        </div>
+        <div class="carousel-item drk">
+          <img class="carousel-img" src="/assets/user/carousel/4.jpg" class="d-block w-100" alt="4">
+          <div class="carousel-caption d-none d-md-block d-flex flex-column justify-content-center h-100" style="top: 0;">
+            <h1><?= $titleCarousel ?></h1>
+            <p><?= $textCarousel ?></p>
+          </div>
+        </div>
+        <div class="carousel-item drk">
+          <img class="carousel-img" src="/assets/user/carousel/5.jpg" class="d-block w-100" alt="5">
+          <div class="carousel-caption d-none d-md-block d-flex flex-column justify-content-center h-100" style="top: 0;">
+            <h1><?= $titleCarousel ?></h1>
+            <p><?= $textCarousel ?></p>
+          </div>
+        </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -58,6 +64,7 @@ $textCarousel = ''; ?>
       </button>
     </div>
   </div>
+
 </header>
 <!-- Testimonial section-->
 <div id="tentang" class="py-5" style="background-color: #DAEFE6;">
@@ -70,7 +77,7 @@ $textCarousel = ''; ?>
         <div class="my-1">
 
           <h2 class="fw-bolder mb-5">Tentang Kami</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit magnam, consectetur eaque deserunt reiciendis suscipit possimus accusamus distinctio voluptates explicabo magni optio, voluptatibus cumque quas a corporis molestias libero doloribus!</p>
+          <p>Kongregasi Suster-Suster JMJ dipersembahkan dibawah perlindungan Keluarga Kudus. Bagi Kongregasi SJMJ Keluarga Kudus Nazaret; Jesus Maria Joseph adalah tempat yang kudus. Disanalah kesederhanaan, pelayanan, dan penyelamatan dimulai. Di tempat tersembunyi dan hening inilah, Yesus dipersiapkan untuk Panggilan-Nya, Keluarga Kudus menjadi model hidup berkomunitas kami.</p>
           <a class="btn btn-primary btn-md px-4 me-sm-3" href="/about">More</a>
         </div>
       </div>
@@ -88,7 +95,7 @@ $textCarousel = ''; ?>
         <div class="my-1 text-end">
 
           <h2 class="fw-bolder mb-5">Suster Suster di SJMJ</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit magnam, consectetur eaque deserunt reiciendis suscipit possimus accusamus distinctio voluptates explicabo magni optio, voluptatibus cumque quas a corporis molestias libero doloribus!</p>
+          <p>Provisial provinsi Jakarta beserta Dewan Provinsial.. Periode 2018-2023</p>
           <a class="btn btn-primary btn-md px-4 me-sm-3" href="/anggota">More</a>
         </div>
       </div>

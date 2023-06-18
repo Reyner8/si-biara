@@ -80,7 +80,7 @@
                                     <select class="form-select" aria-label="Default select example" name="idJenisKerasulan">
                                         <option selected>Open this select menu</option>
                                         <?php foreach ($listJenisKerasulan as $jenisKerasulan) : ?>
-                                            <?php if ($dataEdit['id'] == $jenisKerasulan['id']) : ?>
+                                            <?php if ($dataEdit['idJenisKerasulan'] == $jenisKerasulan['id']) : ?>
                                                 <option value="<?= $jenisKerasulan['id'] ?>" selected><?= $jenisKerasulan['nama'] ?></option>
                                             <?php else : ?>
                                                 <option value="<?= $jenisKerasulan['id'] ?>"><?= $jenisKerasulan['nama'] ?></option>
@@ -172,14 +172,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h4>Foto</h4>
-                            </div>
-                            <div class="col-md-12">
-                                <img class="img-fluid" src="/upload/kerasulan/<?= $kerasulanModal['foto'] ?>" alt="<?= $kerasulanModal['foto'] ?>">
-                            </div>
-                        </div>
+
                         <hr>
                         <div class="row">
                             <div class="col-md-12">

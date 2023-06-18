@@ -123,6 +123,7 @@
                                 <label for="role" class="form-label">Role</label>
                                 <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="role">
                                     <option selected>Open this select menu</option>
+                                    <option value="superadmin">Pimpinan Provinsi</option>
                                     <option value="admin">Pimpinan Komunitas</option>
                                     <option value="anggota">Anggota Komunitas</option>
                                 </select>
@@ -300,9 +301,15 @@
                                                 <select id="role" class="form-select" aria-label="Default select example" name="role">
                                                     <option selected>Open this select menu</option>
                                                     <?php if ($modal['role'] == 'admin') : ?>
+                                                        <option value="superadmin">Pimpinan Provinsi</option>
                                                         <option selected value="admin">Kepala Komunitas</option>
                                                         <option value="user">Anggota Komunitas</option>
+                                                    <?php elseif ($modal['role'] == 'superadmin') : ?>
+                                                        <option selected value="superadmin">Pimpinan Provinsi</option>
+                                                        <option value="admin">Kepala Komunitas</option>
+                                                        <option value="user">Anggota Komunitas</option>
                                                     <?php else : ?>
+                                                        <option value="superadmin">Pimpinan Provinsi</option>
                                                         <option value="admin">Kepala Komunitas</option>
                                                         <option selected value="user">Anggota Komunitas</option>
                                                     <?php endif; ?>
