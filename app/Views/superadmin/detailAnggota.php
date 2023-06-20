@@ -69,7 +69,7 @@
                             <div class="d-flex justify-content-between">
 
                                 <h5 class="card-title">Riwayat Penugasan</h5>
-                                <button class="btn btn-primary btn-sm" data-bs-target="#tambah-penugasan" data-bs-toggle="modal"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-primary btn-sm" data-bs-target="#tambah-penugasan" data-bs-toggle="modal" <?= ($anggota['status'] == 'eksklaustrasi') ? 'disabled' : '' ?>><i class="fa fa-plus"></i></button>
                             </div>
                             <table class="table borderless">
                                 <tr>
@@ -90,8 +90,8 @@
                                         <td><?= $lp['nama'] ?></td>
                                         <td><?= $lp['tanggalPenugasan'] ?></td>
                                         <td>
-                                            <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#detail-penugasan-<?= $lp['id'] ?>"><i class="fa fa-info"></i></button>
-                                            <button type="button" class="btn btn-outline-warning btn-sm" data-bs-toggle="modal" data-bs-target="#edit-penugasan-<?= $lp['id'] ?>"><i class="fa fa-edit"></i></button>
+                                            <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#detail-penugasan-<?= $lp['id'] ?>" <?= ($anggota['status'] == 'eksklaustrasi') ? 'disabled' : '' ?>><i class="fa fa-info"></i></button>
+                                            <button type="button" class="btn btn-outline-warning btn-sm" data-bs-toggle="modal" data-bs-target="#edit-penugasan-<?= $lp['id'] ?>" <?= ($anggota['status'] == 'eksklaustrasi') ? 'disabled' : '' ?>><i class="fa fa-edit"></i></button>
                                             <!-- <form class="d-inline-block" action="/admin/anggota/penugasan/<?= $lp['id'] ?>" method="post">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <button class="btn btn-outline-danger btn-sm"><i class="fa fa-trash"></i></button>
@@ -109,7 +109,7 @@
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title">Riwayat Pembinaan</h5>
-                                <button class="btn btn-primary btn-sm" data-bs-target="#tambah-pembinaan" data-bs-toggle="modal"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-primary btn-sm" data-bs-target="#tambah-pembinaan" data-bs-toggle="modal" <?= ($anggota['status'] == 'eksklaustrasi') ? 'disabled' : '' ?>><i class="fa fa-plus"></i></button>
                             </div>
                             <table class="table borderless">
                                 <tr>
@@ -124,8 +124,8 @@
                                         <td><?= $pembinaan['nama'] ?></td>
                                         <td><?= $pembinaan['tanggalPembinaan'] ?></td>
                                         <td>
-                                            <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#detail-pembinaan-<?= $pembinaan['id'] ?>"><i class="fa fa-info"></i></button>
-                                            <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#edit-pembinaan-<?= $pembinaan['id'] ?>"><i class="fa fa-edit"></i></button>
+                                            <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#detail-pembinaan-<?= $pembinaan['id'] ?>" <?= ($anggota['status'] == 'eksklaustrasi') ? 'disabled' : '' ?>><i class="fa fa-info"></i></button>
+                                            <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#edit-pembinaan-<?= $pembinaan['id'] ?>" <?= ($anggota['status'] == 'eksklaustrasi') ? 'disabled' : '' ?>><i class="fa fa-edit"></i></button>
                                             <!-- <form class="d-inline-block" action="/admin/anggota/pembinaan/<?= $pembinaan['id'] ?>" method="post">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <button class="btn btn-outline-danger btn-sm"><i class="fa fa-trash"></i></button>

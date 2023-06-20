@@ -12,5 +12,5 @@ class HasilBelajarModel extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
-    protected $allowedFields = ['idAnggota', 'universitas', 'fakultas', 'prodi', 'jenjang', 'file'];
+    protected $allowedFields = ['idAnggota', 'universitas', 'fakultas', 'prodi', 'jenjang', 'semester', 'keterangan', 'file'];
 }

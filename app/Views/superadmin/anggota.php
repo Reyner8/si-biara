@@ -51,9 +51,11 @@
                                         <span class="badge bg-<?= ($anggota['status'] == 'aktif') ? 'success' : 'danger' ?>"> <?= $anggota['status'] ?></span>
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#penugasan-<?= $anggota['idAnggota'] ?>">
+
+                                        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#penugasan-<?= $anggota['idAnggota'] ?>" <?= ($anggota['status'] == 'eksklaustrasi') ? 'disabled' : '' ?>>
                                             <i class="fa fa-pencil"></i>
                                         </button>
+
                                         <a class="btn btn-info btn-sm" href="/sa/anggota/detail/<?= $anggota['idAnggota'] ?>">
                                             <i class="fa fa-info"></i>
                                         </a>
@@ -63,7 +65,7 @@
 
                                         <form class="d-inline-block" action="/sa/anggota/<?= $anggota['idAnggota'] ?>" method="post">
                                             <input type="hidden" name="_method" value="DELETE">
-                                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                                            <button class="btn btn-danger btn-sm" <?= ($anggota['status'] == 'eksklaustrasi') ? 'disabled' : '' ?>><i class="fa fa-trash"></i></button>
                                         </form>
                                     </td>
                                 </tr>

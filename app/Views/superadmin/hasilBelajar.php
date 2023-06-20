@@ -57,7 +57,7 @@
                             <div class="d-flex justify-content-between">
 
                                 <h5 class="card-title">Hasil Belajar</h5>
-                                <button class="btn btn-primary btn-sm" data-bs-target="#tambah-hasil" data-bs-toggle="modal"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-primary btn-sm" data-bs-target="#tambah-hasil" data-bs-toggle="modal" <?= ($anggota['status'] == 'eksklaustrasi') ? 'disabled' : '' ?>><i class="fa fa-plus"></i></button>
                             </div>
                             <table class="table borderless">
                                 <tr>
@@ -65,6 +65,8 @@
                                     <th>Fakultas</th>
                                     <th>Program Studi</th>
                                     <th>Jenjang</th>
+                                    <th>Semester</th>
+                                    <th>Keterangan</th>
                                     <th>File</th>
                                     <th>Action</th>
                                 </tr>
@@ -74,6 +76,8 @@
                                         <td><?= $hb['fakultas'] ?></td>
                                         <td><?= $hb['prodi'] ?></td>
                                         <td><?= $hb['jenjang'] ?></td>
+                                        <td><?= $hb['semester'] ?></td>
+                                        <td><?= $hb['keterangan'] ?></td>
                                         <td>
                                             <a href="/upload/belajar/<?= $hb['file'] ?>">Download</a>
 

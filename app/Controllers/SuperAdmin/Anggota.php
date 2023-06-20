@@ -43,6 +43,23 @@ class Anggota extends BaseController
         ]);
     }
 
+    function PengajuanPage()
+    {
+        $nomorBajuTerakhir = $this->AnggotaModel->orderBy('nomorBaju', 'DESC')->first();
+        // dd($nomorBajuTerakhir['nomorBaju']);
+        $nomorBajuBaru = sprintf("%04s", $nomorBajuTerakhir['nomorBaju'] + 1);
+
+        return view('superadmin/anggota', [
+            'judul' => 'Keanggotaan',
+            'nomorBajuBaru' => $nomorBajuBaru,
+            'validation' => \Config\Services::validation(),
+            'listAnggota' => $this->RelationTable->getAnggotaAllWithoutRoleSuperAdmin(),
+            'komunitas' => $this->KomunitasModel->findAll(),
+            'riwayatPenugasan' => $this->RelationTable->riwayatPenugasan(),
+            'tahapPembinaan' => $this->RelationTable->tahapPembinaan(),
+        ]);
+    }
+
     // route : sa/anggota
     public function save()
     {
@@ -527,6 +544,8 @@ class Anggota extends BaseController
         $fakultas = $this->request->getPost('fakultas');
         $prodi = $this->request->getPost('prodi');
         $jenjang = $this->request->getPost('jenjang');
+        $semester = $this->request->getPost('semester');
+        $keterangan = $this->request->getPost('keterangan');
         $file = $this->request->getFile('file');
 
         $rules = [
@@ -534,6 +553,8 @@ class Anggota extends BaseController
             'fakultas' => 'required',
             'prodi' => 'required',
             'jenjang' => 'required',
+            'semester' => 'required',
+            'keterangan' => 'required',
             'file' => [
                 'uploaded[file]',
             ],
@@ -555,6 +576,8 @@ class Anggota extends BaseController
             'fakultas' => $fakultas,
             'prodi' => $prodi,
             'jenjang' => $jenjang,
+            'semester' => $semester,
+            'keterangan' => $keterangan,
             'file' => $newName,
         ]);
 

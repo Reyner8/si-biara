@@ -69,8 +69,17 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/sa/beranda">Beranda</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/sa/anggota">Keanggotaan</a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Keanggotaan
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/sa/anggota">Anggota</a></li>
+                            <li><a class="dropdown-item" href="/sa/pengajuan">Pengajuan Penugasan anggota</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/sa/kegiatan">Kegiatan</a>
@@ -81,9 +90,10 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/sa/arsip">Berkas</a></a>
                     </li>
-                    <li class="nav-item">
+
+                    <!-- <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/sa/provinsi">Provinsi</a></a>
-                    </li>
+                    </li> -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Data

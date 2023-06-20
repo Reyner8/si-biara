@@ -190,6 +190,7 @@ $routes->group('/sa', ['filter' => 'authFilter'], static function ($routes) {
         });
 
         $routes->get('/', 'SuperAdmin\Anggota::index');
+        $routes->get('pengajuan', 'SuperAdmin\Anggota::pengajuanPage');
         $routes->post('/', 'SuperAdmin\Anggota::save');
         $routes->put('(:num)', 'SuperAdmin\Anggota::update/$1');
         $routes->delete('(:num)', 'SuperAdmin\Anggota::delete/$1');

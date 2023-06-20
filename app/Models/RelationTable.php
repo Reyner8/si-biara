@@ -218,7 +218,21 @@ class RelationTable
         FROM anggota a
         JOIN (
             SELECT idAnggota, MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan
-            FROM penugasan where status = 'Y' or (status NOT IN ('Y'))
+            FROM penugasan where status = 'Y'
+            GROUP BY idAnggota
+        ) p ON a.id = p.idAnggota
+        JOIN penugasan ON penugasan.idAnggota = a.id AND p.tanggalPenugasan = penugasan.tanggalPenugasan
+        JOIN komunitas ON komunitas.id = penugasan.idKomunitas
+        ")->getResultArray();
+    }
+
+    public function getAnggotaAllPengajuanSuperAdmin()
+    {
+        return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, komunitas.nama AS namaKomunitas, a.*
+        FROM anggota a
+        JOIN (
+            SELECT idAnggota, MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan
+            FROM penugasan where status = 'T' OR 'M'
             GROUP BY idAnggota
         ) p ON a.id = p.idAnggota
         JOIN penugasan ON penugasan.idAnggota = a.id AND p.tanggalPenugasan = penugasan.tanggalPenugasan
