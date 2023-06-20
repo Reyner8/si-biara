@@ -36,7 +36,7 @@ class Anggota extends BaseController
             'judul' => 'Keanggotaan',
             'nomorBajuBaru' => $nomorBajuBaru,
             'validation' => \Config\Services::validation(),
-            'listAnggota' => $this->RelationTable->getAnggotaAllWithoutRole(),
+            'listAnggota' => $this->RelationTable->getAnggotaAllWithoutRoleSuperAdmin(),
             'komunitas' => $this->KomunitasModel->findAll(),
             'riwayatPenugasan' => $this->RelationTable->riwayatPenugasan(),
             'tahapPembinaan' => $this->RelationTable->tahapPembinaan(),
@@ -313,7 +313,7 @@ class Anggota extends BaseController
             $newName = 'penugasan-' . $file->getRandomName();
             // $file->move('upload/penugasan', $newName);
         }
-        dd($newName);
+        // dd($newName);
         $this->PenugasanModel->update($idPenugasan, [
             'idKomunitas' => $idKomunitas,
             'idAnggota' => $idAnggota,

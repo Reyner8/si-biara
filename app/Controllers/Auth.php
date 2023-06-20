@@ -4,9 +4,13 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-
 class Auth extends BaseController
 {
+    protected $RelationTable;
+    function __construct()
+    {
+        $this->RelationTable = new \App\Models\RelationTable();
+    }
     public function index()
     {
         // dd(session());
@@ -38,13 +42,11 @@ class Auth extends BaseController
         }
 
         $AnggotaModel = new \App\Models\AnggotaModel();
-        $PenugasanModel = new \App\Models\PenugasanModel();
+        // $PenugasanModel = new \App\Models\PenugasanModel();
         $getDataAnggota = $AnggotaModel->where('nomorBaju', $username)->first();
         if ($getDataAnggota) {
-            $getPenugasan = $PenugasanModel->where('idAnggota', $getDataAnggota['id'])
-                ->orderBy('tanggalPenugasan', 'DESC')
-                ->where('penugasan.status', 'Y')
-                ->first();
+            $getPenugasan = $this->RelationTable->getAnggotaByAnggota($getDataAnggota['id']);
+            // dd($getPenugasan['idKomunitas']);
         }
 
         if ($getDataAnggota['role'] != $role) {

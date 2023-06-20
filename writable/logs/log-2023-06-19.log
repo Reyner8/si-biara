@@ -1,0 +1,59 @@
+CRITICAL - 2023-06-19 12:32:30 --> syntax error, unexpected '}'
+in APPPATH\Controllers\Auth.php on line 49.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Auth')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Auth', true)
+ 6 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-19 12:32:57 --> Undefined index: idAnggota
+in APPPATH\Controllers\Auth.php on line 74.
+ 1 APPPATH\Controllers\Auth.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: idAnggota', 'APPPATH\\Controllers\\Auth.php', 74, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->login()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-19 12:33:25 --> Undefined index: idKomunitas
+in APPPATH\Controllers\Auth.php on line 76.
+ 1 APPPATH\Controllers\Auth.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: idKomunitas', 'APPPATH\\Controllers\\Auth.php', 76, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->login()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-19 12:35:17 --> Undefined index: idKomunitas
+in APPPATH\Controllers\Auth.php on line 49.
+ 1 APPPATH\Controllers\Auth.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: idKomunitas', 'APPPATH\\Controllers\\Auth.php', 49, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->login()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-06-19 12:38:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 'Y'
+            GROUP BY idAnggota
+        ) p ON a.id = p.idAnggota
+   ...' at line 5 in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT penugasa...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT penugasa...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT penugasa...')
+#3 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(217): CodeIgniter\Database\BaseConnection->query('SELECT penugasa...')
+#4 C:\xampp\htdocs\si-biara\app\Controllers\SuperAdmin\Anggota.php(39): App\Models\RelationTable->getAnggotaAllWithoutRoleSuperAdmin()
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->index()
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-06-19 12:38:57 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\RelationTable.php on line 226.
+ 1 APPPATH\Controllers\SuperAdmin\Anggota.php(39): App\Models\RelationTable->getAnggotaAllWithoutRoleSuperAdmin()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

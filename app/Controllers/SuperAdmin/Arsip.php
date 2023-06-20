@@ -37,10 +37,10 @@ class Arsip extends BaseController
         $nama = $this->request->getPost('nama');
         $tanggal = $this->request->getPost('tanggal');
         $jenisFile = $this->request->getPost('jenisFile');
-        // $idProvinsi = $this->request->getPost('idProvinsi');
+        $idProvinsi = $this->request->getPost('idProvinsi');
         $file = $this->request->getFile('file');
 
-        $idProvinsi = $this->RelationTable->getProvinsiByIdKomunitas(session()->get('komunitas'))['id'];
+        // $idProvinsi = $this->RelationTable->getProvinsiByIdKomunitas(session()->get('komunitas'))['id'];
         $rules = [
             'nama' => 'required',
             'tanggal' => 'required',

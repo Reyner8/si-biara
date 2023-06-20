@@ -161,6 +161,20 @@ class RelationTable
         WHERE penugasan.idKomunitas = '$komunitas' AND a.role = 'user'")->getResultArray();
     }
 
+    public function getAnggotaByAnggota($idAnggota)
+    {
+        return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, komunitas.nama AS namaKomunitas, a.*
+        FROM anggota a
+        JOIN (
+            SELECT idAnggota, MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan
+            FROM penugasan where status = 'Y'
+            GROUP BY idAnggota
+        ) p ON a.id = p.idAnggota
+        JOIN penugasan ON penugasan.idAnggota = a.id AND p.tanggalPenugasan = penugasan.tanggalPenugasan
+        JOIN komunitas ON komunitas.id = penugasan.idKomunitas
+        WHERE penugasan.idAnggota = '$idAnggota'")->getRowArray();
+    }
+
     public function getAnggotaAll()
     {
         return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, komunitas.nama AS namaKomunitas, a.*
@@ -196,6 +210,20 @@ class RelationTable
         // JOIN komunitas ON penugasan.idKomunitas = komunitas.id
         // JOIN anggota ON penugasan.idAnggota = anggota.id
         // ")->getResultArray();
+    }
+
+    public function getAnggotaAllWithoutRoleSuperAdmin()
+    {
+        return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, komunitas.nama AS namaKomunitas, a.*
+        FROM anggota a
+        JOIN (
+            SELECT idAnggota, MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan
+            FROM penugasan where status = 'Y' or (status NOT IN ('Y'))
+            GROUP BY idAnggota
+        ) p ON a.id = p.idAnggota
+        JOIN penugasan ON penugasan.idAnggota = a.id AND p.tanggalPenugasan = penugasan.tanggalPenugasan
+        JOIN komunitas ON komunitas.id = penugasan.idKomunitas
+        ")->getResultArray();
     }
 
     public function getAnggotaByRoleAndKomunitas($idKomunitas)
