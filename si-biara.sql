@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2023 at 06:14 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 7.4.30
+-- Generation Time: Jun 20, 2023 at 08:23 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,7 +32,7 @@ CREATE TABLE `about` (
   `sejarah` text NOT NULL,
   `visi` text NOT NULL,
   `misi` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `about`
@@ -59,7 +59,7 @@ CREATE TABLE `anggota` (
   `berkasTerkait` text NOT NULL,
   `role` enum('superuser','superadmin','admin','user') NOT NULL DEFAULT 'user',
   `foto` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `anggota`
@@ -71,31 +71,9 @@ INSERT INTO `anggota` (`id`, `nama`, `nomorBaju`, `password`, `tempatLahir`, `ta
 (23, 'Janelita Doe', '0002', '$2a$12$sNupbS0YRIgWdXIwaCRQ6OdCNWFxoYNwZYreolTHeav8AbSniBEVy', 'Amnatun', '1991-02-06', '628119988231', 'aktif', '', 'admin', 'foto-1674360963_aed06b10b29f9e0b0c9d.jpeg'),
 (25, 'test foto', '0003', '$2y$10$nnrdkY1QFxZp4BoB8wb9eOCRRgW9kJbV6jvwMwYd8Q4uCak2fLbzO', 'test', '2023-01-01', '00000', 'aktif', '', 'user', 'foto-1676699409_a942fef6518b7c40d9af.jpg'),
 (30, 'asd', '0004', '$2y$10$0e/fbGJSPLfWMpJBXQ20yuxHPNJ6PRvizw21jnqYU6XbovN6miAjm', 'sdasd', '2023-06-18', '3123123', 'aktif', '', 'superadmin', 'foto-1687056572_94409dfcbf76765cd5dc.jpg'),
-(31, 'world doeeee', '0005', '$2y$10$jPClMdt5zFzQ20P4abzMQeCe.tie5uUvVR9uy4Fqc3oWH06aegvMe', 'asd', '2023-12-31', '123123', 'aktif', '', 'user', 'foto-1687065711_6cf98a53cc7d63f82a14.jpg'),
+(31, 'world doeeee', '0005', '$2y$10$jPClMdt5zFzQ20P4abzMQeCe.tie5uUvVR9uy4Fqc3oWH06aegvMe', 'asd', '2023-12-31', '123123', 'eksklaustrasi', '', 'user', 'foto-1687065711_6cf98a53cc7d63f82a14.jpg'),
 (32, 'hello', '0006', '$2y$10$IrkPR.QSKzgBnZOTkoc/o.Za/ZSBq.VIO6K.39pGtpRXh2y7glCZy', 'asdasd', '2023-12-31', '12312312', 'non-aktif', '', 'user', 'foto-1687067201_01dc8ded2e8e4ae4e3ff.jpg'),
 (33, 'asdasdasd', '0007', '$2y$10$zZWW/O0mIXXLwxYjc2yLwuoJ6iP9j.rq.EizZTdJ1vtThONTUC2Ie', 'asdasdasd', '2021-12-01', '123123', 'non-aktif', '', 'user', 'foto-1687067297_93ac9557b67c3d6c96a7.jpg');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `arsip`
---
-
-CREATE TABLE `arsip` (
-  `id` int(11) NOT NULL,
-  `idProvinsi` int(11) DEFAULT NULL,
-  `nama` varchar(100) DEFAULT NULL,
-  `tanggal` date DEFAULT NULL,
-  `jenisFile` enum('tahunan','bulanan','surat_masuk','surat_keluar') DEFAULT NULL,
-  `file` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `arsip`
---
-
-INSERT INTO `arsip` (`id`, `idProvinsi`, `nama`, `tanggal`, `jenisFile`, `file`) VALUES
-(7, 1, 'asdasd', '2023-06-18', 'tahunan', 'arsip-1687060228_5d122ac23a13ebafc9b5.bin');
 
 -- --------------------------------------------------------
 
@@ -110,7 +88,7 @@ CREATE TABLE `arsipkomunitas` (
   `tanggal` date DEFAULT NULL,
   `jenisFile` enum('tahunan','bulanan','surat_masuk','surat_keluar') DEFAULT NULL,
   `file` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `arsipkomunitas`
@@ -129,7 +107,7 @@ CREATE TABLE `galeri` (
   `id` int(11) NOT NULL,
   `idKegiatan` int(11) NOT NULL,
   `foto` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `galeri`
@@ -161,16 +139,18 @@ CREATE TABLE `hasilbelajar` (
   `fakultas` varchar(200) NOT NULL,
   `prodi` varchar(200) NOT NULL,
   `jenjang` enum('D3','D4','S1','S2','S3') NOT NULL,
+  `semester` int(11) NOT NULL,
+  `keterangan` enum('lulus','tidak-lulus') NOT NULL,
   `file` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `hasilbelajar`
 --
 
-INSERT INTO `hasilbelajar` (`id`, `idAnggota`, `universitas`, `fakultas`, `prodi`, `jenjang`, `file`) VALUES
-(2, 23, 'asd', 'asd', 'sda', 'D3', 'hasilBelajar-1686764296_e75e52ef32da2d2195b0.docx'),
-(5, 33, 'asdasd', 'asdasda', 'asdasd', 'S2', 'hasilBelajar-1687067371_73267d15e2128564e361.bin');
+INSERT INTO `hasilbelajar` (`id`, `idAnggota`, `universitas`, `fakultas`, `prodi`, `jenjang`, `semester`, `keterangan`, `file`) VALUES
+(2, 23, 'asd', 'asd', 'sda', 'D3', 1, 'lulus', 'hasilBelajar-1686764296_e75e52ef32da2d2195b0.docx'),
+(5, 33, 'asdasd', 'asdasda', 'asdasd', 'S2', 1, 'lulus', 'hasilBelajar-1687067371_73267d15e2128564e361.bin');
 
 -- --------------------------------------------------------
 
@@ -182,7 +162,7 @@ CREATE TABLE `jeniskerasulan` (
   `id` int(11) NOT NULL,
   `nama` varchar(200) NOT NULL,
   `keterangan` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `jeniskerasulan`
@@ -206,7 +186,7 @@ CREATE TABLE `kegiatan` (
   `deskripsi` text NOT NULL,
   `tanggal` date NOT NULL,
   `thumbnail` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `kegiatan`
@@ -229,7 +209,7 @@ CREATE TABLE `kerasulan` (
   `namaLembaga` varchar(255) NOT NULL,
   `tanggalBerdiri` date NOT NULL,
   `keterangan` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `kerasulan`
@@ -251,7 +231,7 @@ CREATE TABLE `komunitas` (
   `alamat` text NOT NULL,
   `tanggalBerdiri` date NOT NULL,
   `status` enum('1','0') DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `komunitas`
@@ -260,7 +240,7 @@ CREATE TABLE `komunitas` (
 INSERT INTO `komunitas` (`id`, `idProvinsi`, `nama`, `alamat`, `tanggalBerdiri`, `status`) VALUES
 (1, 1, 'Komunitas 1', 'Oeba', '2022-11-25', '1'),
 (3, 1, 'Komunitas 2', 'kayu putih                                                                                                                                                             ', '2022-11-01', '1'),
-(5, 2, 'Komunitas 3', 'alamat', '2022-11-01', '1');
+(5, 1, 'Komunitas 3', 'alamat', '2022-11-01', '1');
 
 -- --------------------------------------------------------
 
@@ -276,7 +256,7 @@ CREATE TABLE `pembinaan` (
   `keterangan` text NOT NULL,
   `status` enum('Y','N') NOT NULL DEFAULT 'N',
   `file` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pembinaan`
@@ -305,7 +285,7 @@ CREATE TABLE `penugasan` (
   `keterangan` text DEFAULT NULL,
   `status` enum('Y','T','M') NOT NULL DEFAULT 'M',
   `file` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `penugasan`
@@ -335,15 +315,14 @@ CREATE TABLE `provinsi` (
   `visi` text DEFAULT NULL,
   `misi` text DEFAULT NULL,
   `sejarahSingkat` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `provinsi`
 --
 
 INSERT INTO `provinsi` (`id`, `nama`, `visi`, `misi`, `sejarahSingkat`) VALUES
-(1, 'Provinsi', 'adsdasd', 'asdasd', 'asdasdasd'),
-(2, 'Provinsi 2', 'adsdasd', 'asdasd', 'asdasdasd');
+(1, 'Provinsi', 'adsdasd', 'asdasd', 'asdasdasd');
 
 -- --------------------------------------------------------
 
@@ -355,7 +334,7 @@ CREATE TABLE `tahappembinaan` (
   `id` int(11) NOT NULL,
   `nama` varchar(200) NOT NULL,
   `keterangan` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tahappembinaan`
@@ -382,12 +361,6 @@ ALTER TABLE `about`
 -- Indexes for table `anggota`
 --
 ALTER TABLE `anggota`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `arsip`
---
-ALTER TABLE `arsip`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -471,12 +444,6 @@ ALTER TABLE `about`
 --
 ALTER TABLE `anggota`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-
---
--- AUTO_INCREMENT for table `arsip`
---
-ALTER TABLE `arsip`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `arsipkomunitas`
