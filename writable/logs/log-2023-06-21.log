@@ -1,0 +1,102 @@
+CRITICAL - 2023-06-21 01:05:25 --> Undefined index: nama
+in APPPATH\Controllers\SuperAdmin\Laporan.php on line 120.
+ 1 APPPATH\Controllers\SuperAdmin\Laporan.php(120): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama', 'APPPATH\\Controllers\\SuperAdmin\\Laporan.php', 120, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Laporan->dataPenugasan()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-21 01:06:24 --> Undefined index: nama
+in APPPATH\Controllers\SuperAdmin\Laporan.php on line 121.
+ 1 APPPATH\Controllers\SuperAdmin\Laporan.php(121): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama', 'APPPATH\\Controllers\\SuperAdmin\\Laporan.php', 121, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Laporan->dataPenugasan()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-21 01:06:51 --> Undefined index: id
+in APPPATH\Controllers\SuperAdmin\Laporan.php on line 121.
+ 1 APPPATH\Controllers\SuperAdmin\Laporan.php(121): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'APPPATH\\Controllers\\SuperAdmin\\Laporan.php', 121, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Laporan->dataPenugasan()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-21 01:09:59 --> Trying to get property 'nama' of non-object
+in APPPATH\Controllers\SuperAdmin\Laporan.php on line 121.
+ 1 APPPATH\Controllers\SuperAdmin\Laporan.php(121): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama\' of non-object', 'APPPATH\\Controllers\\SuperAdmin\\Laporan.php', 121, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Laporan->dataPenugasan()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-21 01:10:08 --> Undefined index: nama
+in APPPATH\Controllers\SuperAdmin\Laporan.php on line 121.
+ 1 APPPATH\Controllers\SuperAdmin\Laporan.php(121): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama', 'APPPATH\\Controllers\\SuperAdmin\\Laporan.php', 121, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Laporan->dataPenugasan()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-21 01:13:00 --> Array to string conversion
+in APPPATH\Controllers\SuperAdmin\Laporan.php on line 126.
+ 1 APPPATH\Controllers\SuperAdmin\Laporan.php(126): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\SuperAdmin\\Laporan.php', 126, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Laporan->dataPenugasan()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-21 01:13:15 --> Undefined variable: suster
+in APPPATH\Views\superadmin\laporan\dataPenugasan.php on line 42.
+ 1 APPPATH\Views\superadmin\laporan\dataPenugasan.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: suster', 'APPPATH\\Views\\superadmin\\laporan\\dataPenugasan.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\laporan\\dataPenugasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/laporan/dataPenugasan', [], true)
+ 5 APPPATH\Controllers\SuperAdmin\Laporan.php(127): view('superadmin/laporan/dataPenugasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Laporan->dataPenugasan()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-21 01:14:04 --> Undefined variable: suster
+in APPPATH\Views\superadmin\laporan\dataPenugasan.php on line 42.
+ 1 APPPATH\Views\superadmin\laporan\dataPenugasan.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: suster', 'APPPATH\\Views\\superadmin\\laporan\\dataPenugasan.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\laporan\\dataPenugasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/laporan/dataPenugasan', [], true)
+ 5 APPPATH\Controllers\SuperAdmin\Laporan.php(127): view('superadmin/laporan/dataPenugasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Laporan->dataPenugasan()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-21 01:16:56 --> Array to string conversion
+in APPPATH\Controllers\SuperAdmin\Laporan.php on line 147.
+ 1 APPPATH\Controllers\SuperAdmin\Laporan.php(147): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\SuperAdmin\\Laporan.php', 147, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Laporan->dataPembinaan()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-21 01:52:00 --> Undefined variable: listJenisKerasulan
+in APPPATH\Views\kerasulan.php on line 9.
+ 1 APPPATH\Views\kerasulan.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: listJenisKerasulan', 'APPPATH\\Views\\kerasulan.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\kerasulan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kerasulan', [], true)
+ 5 APPPATH\Controllers\Komunitas.php(24): view('kerasulan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Komunitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komunitas))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-21 01:52:56 --> syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting end of file
+in APPPATH\Views\komunitas.php on line 37.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('komunitas', [], true)
+ 3 APPPATH\Controllers\Komunitas.php(24): view('komunitas', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Komunitas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komunitas))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -21,6 +21,7 @@ class About extends BaseController
             'judul' => 'About',
             'editAbout' => $this->AboutModel->first(),
             'validation' => \Config\Services::validation(),
+
         ]);
     }
 

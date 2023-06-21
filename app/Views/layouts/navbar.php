@@ -10,6 +10,7 @@
                 <li class="nav-item"><a class="nav-link active" href="/anggota">Anggota</a></li>
                 <li class="nav-item"><a class="nav-link active" href="/kegiatan">Kegiatan Kami</a></li>
                 <li class="nav-item"><a class="nav-link active" href="/kerasulan">Karya Kerasulan</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/komunitas">Komunitas</a></li>
                 <li class="nav-item"><a class="nav-link active" href="/about">About</a></li>
                 <li class="nav-item d-flex align-items-center"><a class="btn btn-primary btn-sm " href="/auth">Login</a></li>
                 <!-- <li class="nav-item"><a class="nav-link" href="/pembinaan">Tahap Pembinaan</a></li> -->

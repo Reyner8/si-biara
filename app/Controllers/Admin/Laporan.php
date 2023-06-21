@@ -36,15 +36,15 @@ class Laporan extends BaseController
 
   function dataSuster()
   {
-    // $status = $this->request->getPost('status');
-    $listAnggota = $this->RelationTable->dataAnggota();
+    $status = $this->request->getPost('status');
+    $listAnggota = $this->RelationTable->dataAnggota(session()->get('komunitas'), $status);
     // dd($listAnggota);
 
     // dd('test');
     $dompdf = new Dompdf();
 
     $html = view('Admin/laporan/dataSuster', [
-      'namaLaporan' => 'Laporan Data Suster',
+      'namaLaporan' => 'Laporan Data Suster (' . $status . ')',
       'listSuster' => $listAnggota
     ]);
     $dompdf->loadHtml($html);

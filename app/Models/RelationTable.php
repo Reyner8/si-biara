@@ -41,7 +41,7 @@ class RelationTable
             ->join('komunitas', 'komunitas.id = penugasan.idKomunitas')
             ->where('idKomunitas', $idKomunitas)
             ->where('penugasan.status', 'Y')
-            ->where('anggota.role', 'admin')
+            ->where('penugasan.role', 'admin')
             ->get()->getRowArray();
     }
 
@@ -158,12 +158,26 @@ class RelationTable
         ) p ON a.id = p.idAnggota
         JOIN penugasan ON penugasan.idAnggota = a.id AND p.tanggalPenugasan = penugasan.tanggalPenugasan
         JOIN komunitas ON komunitas.id = penugasan.idKomunitas
-        WHERE penugasan.idKomunitas = '$komunitas' AND a.role = 'user'")->getResultArray();
+        WHERE penugasan.idKomunitas = '$komunitas' AND penugasan.role = 'user'")->getResultArray();
     }
 
     public function getAnggotaByAnggota($idAnggota)
     {
         return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, komunitas.nama AS namaKomunitas, a.*
+        FROM anggota a
+        JOIN (
+            SELECT idAnggota, MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan
+            FROM penugasan where status = 'Y' and role = 'superadmin'
+            GROUP BY idAnggota
+        ) p ON a.id = p.idAnggota
+        JOIN penugasan ON penugasan.idAnggota = a.id AND p.tanggalPenugasan = penugasan.tanggalPenugasan
+        JOIN komunitas ON komunitas.id = penugasan.idKomunitas
+        WHERE penugasan.idAnggota = '$idAnggota'")->getRowArray();
+    }
+
+    public function getAnggotaAuth($idAnggota)
+    {
+        return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, penugasan.role, komunitas.nama AS namaKomunitas, a.*
         FROM anggota a
         JOIN (
             SELECT idAnggota, MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan
@@ -186,7 +200,7 @@ class RelationTable
         ) p ON a.id = p.idAnggota
         JOIN penugasan ON penugasan.idAnggota = a.id AND p.tanggalPenugasan = penugasan.tanggalPenugasan
         JOIN komunitas ON komunitas.id = penugasan.idKomunitas
-        WHERE a.role = 'user'
+        WHERE penugasan.role = 'user'
         ")->getResultArray();
     }
 
@@ -214,11 +228,40 @@ class RelationTable
 
     public function getAnggotaAllWithoutRoleSuperAdmin()
     {
-        return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, komunitas.nama AS namaKomunitas, a.*
+        return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, penugasan.role, komunitas.nama AS namaKomunitas, a.*
         FROM anggota a
         JOIN (
             SELECT idAnggota, MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan
             FROM penugasan where status = 'Y'
+            GROUP BY idAnggota
+        ) p ON a.id = p.idAnggota
+        JOIN penugasan ON penugasan.idAnggota = a.id AND p.tanggalPenugasan = penugasan.tanggalPenugasan
+        JOIN komunitas ON komunitas.id = penugasan.idKomunitas
+        ")->getResultArray();
+    }
+
+    function getRiwayatPemimpinProvinsi()
+    {
+        return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, penugasan.role, komunitas.nama AS namaKomunitas, a.*
+        FROM anggota a
+        JOIN (
+            SELECT idAnggota, MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan
+            FROM penugasan where status = 'Y'
+            GROUP BY idAnggota
+        ) p ON a.id = p.idAnggota
+        JOIN penugasan ON penugasan.idAnggota = a.id AND p.tanggalPenugasan = penugasan.tanggalPenugasan
+        JOIN komunitas ON komunitas.id = penugasan.idKomunitas
+        WHERE penugasan.role = 'superadmin' order by p.tanggalPenugasan DESC
+        ")->getResultArray();
+    }
+
+    public function getAnggotaAllWithoutRoleStatusPenugasanAllSuperAdmin()
+    {
+        return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, penugasan.role, komunitas.nama AS namaKomunitas, a.*
+        FROM anggota a
+        JOIN (
+            SELECT idAnggota, MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan
+            FROM penugasan
             GROUP BY idAnggota
         ) p ON a.id = p.idAnggota
         JOIN penugasan ON penugasan.idAnggota = a.id AND p.tanggalPenugasan = penugasan.tanggalPenugasan
@@ -249,13 +292,13 @@ class RelationTable
         JOIN penugasan USING (idAnggota, idKomunitas)
         JOIN komunitas ON penugasan.idKomunitas = komunitas.id
         JOIN anggota ON penugasan.idAnggota = anggota.id
-        WHERE anggota.role = 'admin' and penugasan.idKomunitas = '$idKomunitas'
+        WHERE penugasan.role = 'admin' and penugasan.idKomunitas = '$idKomunitas'
         ")->getRowArray();
     }
 
     public function getAnggotaByRoleKomunitas($idKomunitas, $role)
     {
-        return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, komunitas.nama AS namaKomunitas, a.*
+        return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, penugasan.role, komunitas.nama AS namaKomunitas, a.*
         FROM anggota a
         JOIN (
             SELECT idAnggota, MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan
@@ -264,9 +307,7 @@ class RelationTable
         ) p ON a.id = p.idAnggota
         JOIN penugasan ON penugasan.idAnggota = a.id AND p.tanggalPenugasan = penugasan.tanggalPenugasan
         JOIN komunitas ON komunitas.id = penugasan.idKomunitas
-        WHERE komunitas.id = '$idKomunitas' AND a.role = '$role'
-        
-        ")->getRowArray();
+        WHERE komunitas.id = '$idKomunitas' AND penugasan.role = '$role'")->getRowArray();
     }
 
     public function getAnggotaByIdAnggota($idAnggota)
@@ -333,17 +374,67 @@ class RelationTable
             ->get()->getResultArray();
     }
 
-    public function dataAnggota()
+    function getAnggotaPenugasanByKomunitas($idKomunitas)
     {
-        $komunitas = session()->get('komunitas');
-        return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, penugasan.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, komunitas.nama AS namaKomunitas, anggota.* FROM 
-        (SELECT penugasan.idAnggota,penugasan.idKomunitas,
-        MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan 
-        FROM penugasan WHERE STATUS = 'Y' OR (status NOT IN ('Y')) GROUP BY penugasan.idAnggota) AS P
-        JOIN penugasan USING (idAnggota, idKomunitas)
-        JOIN komunitas ON penugasan.idKomunitas = komunitas.id
-        JOIN anggota ON penugasan.idAnggota = anggota.id
-        WHERE penugasan.idKomunitas = '$komunitas' AND anggota.role = 'user'")->getResultArray();
+        return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, penugasan.role, komunitas.nama AS namaKomunitas, a.*
+        FROM anggota a
+        JOIN (
+            SELECT idAnggota, MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan
+            FROM penugasan WHERE status = 'Y'
+            GROUP BY idAnggota
+        ) p ON a.id = p.idAnggota
+        JOIN penugasan ON penugasan.idAnggota = a.id AND p.tanggalPenugasan = penugasan.tanggalPenugasan
+        JOIN komunitas ON komunitas.id = penugasan.idKomunitas
+        WHERE komunitas.id = '$idKomunitas'")->getResultArray();
+    }
+
+    function getAnggotaPembinaanByidPembinaan($idPembinaan)
+    {
+        return $this->db->query("SELECT pembinaan.idTahapPembinaan, pembinaan.idAnggota, p.tanggalPembinaan, pembinaan.keterangan, pembinaan.status AS statusPembinaan, tahapPembinaan.nama AS namaTahapPembinaan, komunitas.nama AS namaKomunitas, a.*
+        FROM anggota a
+        JOIN (
+            SELECT idAnggota, MAX(pembinaan.tanggalPembinaan) AS tanggalPembinaan
+            FROM pembinaan WHERE status = 'Y'
+            GROUP BY idAnggota
+        ) p ON a.id = p.idAnggota
+        JOIN pembinaan ON pembinaan.idAnggota = a.id AND p.tanggalPembinaan = pembinaan.tanggalPembinaan
+        JOIN tahapPembinaan ON tahapPembinaan.id = pembinaan.idTahapPembinaan
+        JOIN (
+            SELECT idAnggota, idKomunitas, MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan
+            FROM penugasan WHERE status = 'Y'
+            GROUP BY idAnggota
+        ) pen ON pen.idAnggota = a.id
+        JOIN komunitas ON komunitas.id = pen.idKomunitas
+        WHERE tahapPembinaan.id = '$idPembinaan'")->getResultArray();
+    }
+
+    public function dataAnggota($komunitas, $status)
+    {
+
+        return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, penugasan.role, komunitas.nama AS namaKomunitas, a.*
+        FROM anggota a
+        JOIN (
+            SELECT idAnggota, MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan
+            FROM penugasan WHERE status = 'Y'
+            GROUP BY idAnggota
+        ) p ON a.id = p.idAnggota
+        JOIN penugasan ON penugasan.idAnggota = a.id AND p.tanggalPenugasan = penugasan.tanggalPenugasan
+        JOIN komunitas ON komunitas.id = penugasan.idKomunitas
+        WHERE komunitas.id = '$komunitas' and a.status = '$status'")->getResultArray();
+    }
+    public function dataAnggotaAll($status)
+    {
+
+        return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, penugasan.role, komunitas.nama AS namaKomunitas, a.*
+        FROM anggota a
+        JOIN (
+            SELECT idAnggota, MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan
+            FROM penugasan WHERE status = 'Y'
+            GROUP BY idAnggota
+        ) p ON a.id = p.idAnggota
+        JOIN penugasan ON penugasan.idAnggota = a.id AND p.tanggalPenugasan = penugasan.tanggalPenugasan
+        JOIN komunitas ON komunitas.id = penugasan.idKomunitas
+        WHERE a.status = '$status'")->getResultArray();
     }
 
     public function getAnggotaById($idAnggota)

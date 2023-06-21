@@ -33,6 +33,8 @@
       <th>Kode Baju</th>
       <th>Nama</th>
       <th>Tempat, Tanggal Lahir</th>
+      <th>Tanggal Penugasan</th>
+      <th>Keterangan Penugasan</th>
       <th>Nomor Telepon</th>
       <th>Status</th>
     </tr>
@@ -41,6 +43,8 @@
         <td><?= $suster['nomorBaju'] ?></td>
         <td><?= $suster['nama'] ?></td>
         <td><?= $suster['tempatLahir'] . ', ' . $suster['tanggalLahir'] ?></td>
+        <td><?= $suster['tanggalPenugasan'] ?></td>
+        <td><?= $suster['keterangan'] ?></td>
         <td><?= $suster['nomorTelepon'] ?></td>
         <td><?= $suster['status'] ?></td>
       </tr>

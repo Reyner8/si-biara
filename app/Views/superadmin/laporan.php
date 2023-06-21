@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="row mb-5">
-        <div class="col-md-3">
+        <div class="col-md-3 mb-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Laporan Data Suster</h5>
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 mb-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Laporan Data Master</h5>
@@ -64,7 +64,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 mb-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Laporan Student & Hasil Belajar</h5>
@@ -79,15 +79,33 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 mb-3">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Laporan Pembinaan & Penugasan</h5>
-                    <form action="/sa/laporan/data/penunjang" method="post">
+                    <h5 class="card-title">Laporan Penugasan</h5>
+                    <form action="/sa/laporan/data/penugasan" method="post">
                         <div class="mb-2">
-                            <select class="form-control" name="penunjang" id="status">
-                                <option value="pembinaan" selected>Pembinaan</option>
-                                <option value="penugasan">Penugasan</option>
+                            <select class="form-control" name="idKomunitas" id="status">
+                                <?php foreach ($komunitas as $k) : ?>
+                                    <option value="<?= $k['id'] ?>"><?= $k['nama'] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Laporan Pembinaan</h5>
+                    <form action="/sa/laporan/data/pembinaan" method="post">
+                        <div class="mb-2">
+                            <select class="form-control" name="idPembinaan" id="status">
+                                <?php foreach ($tahapPembinaan as $tp) : ?>
+                                    <option value="<?= $tp['id'] ?>"><?= $tp['nama'] ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                         <button class="btn btn-primary">Submit</button>

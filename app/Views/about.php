@@ -53,6 +53,40 @@
         </div>
       </div>
     <?php endforeach; ?>
+    <div class="row">
+      <div class="col-md-12 mt-5">
+        <div class="card">
+          <div class="card-header">
+            <h3>Riwayat Pemimpin Provinsi</h3>
+          </div>
+          <div class="card-body">
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Nomor Baju</th>
+                  <th scope="col">Nama</th>
+                  <th scope="col">Nama Komunitas</th>
+                  <th scope="col">Tanggal Penugasan</th>
+                  <th scope="col">Keterangan Penugasan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($riwayatPemimpinProvinsi as $riwayat) : ?>
+                  <tr>
+                    <td><?= $riwayat['nomorBaju'] ?></td>
+                    <td><?= $riwayat['nama'] ?></td>
+                    <td><?= $riwayat['namaKomunitas'] ?></td>
+                    <td><?= $riwayat['tanggalPenugasan'] ?></td>
+                    <td><?= $riwayat['keterangan'] ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>

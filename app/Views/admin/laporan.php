@@ -35,8 +35,12 @@
                     <form action="/admin/laporan/data/suster" method="post">
                         <div class="mb-2">
                             <label for="dataSuster">Data Suster</label>
-                            <select class="form-control" name="status" id="status" disabled>
-                                <option value="semua">Semua Data</option>
+                            <select class="form-control" name="status" id="status">
+                                <!-- <option value="semua">Semua Data</option> -->
+                                <option value="aktif">Aktif</option>
+                                <option value="non-aktif">Non Aktif</option>
+                                <option value="eksklaustrasi">Eksklaustrasi</option>
+                                <option value="meninggal">Meninggal</option>
                             </select>
                         </div>
                         <button class="btn btn-primary">Submit</button>

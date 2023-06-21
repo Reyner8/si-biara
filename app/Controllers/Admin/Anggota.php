@@ -29,6 +29,7 @@ class Anggota extends BaseController
 
     public function index()
     {
+        // dd(session()->get('komunitas'));
         $nomorBajuTerakhir = $this->AnggotaModel->orderBy('nomorBaju', 'DESC')->first();
         $nomorBajuBaru = sprintf("%04s", $nomorBajuTerakhir['nomorBaju'] + 1);
         return view('admin/anggota', [

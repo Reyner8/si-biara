@@ -22,6 +22,7 @@ class Laporan extends BaseController
     $this->ProvinsiModel = new \App\Models\ProvinsiModel();
     $this->AnggotaModel = new \App\Models\AnggotaModel();
     $this->KomunitasModel = new \App\Models\KomunitasModel();
+    $this->KerasulanModel = new \App\Models\KerasulanModel();
     $this->TahapPembinaanModel = new \App\Models\TahapPembinaanModel();
     $this->HasilBelajarModel = new \App\Models\HasilBelajarModel();
   }
@@ -31,24 +32,23 @@ class Laporan extends BaseController
     return view('superadmin/laporan', [
       'judul' => 'Laporan',
       'validation' => \Config\Services::validation(),
+      'tahapPembinaan' => $this->TahapPembinaanModel->findAll(),
+      'komunitas' => $this->KomunitasModel->findAll()
     ]);
   }
 
   function dataSuster()
   {
     $status = $this->request->getPost('status');
-    if ($status == 'semua') {
-      $listAnggota = $this->AnggotaModel->findAll();
-    } else {
-      $listAnggota = $this->AnggotaModel->where('status', $status)->findAll();
-    }
+    $listAnggota = $this->RelationTable->dataAnggotaAll($status);
 
     // dd('test');
     $dompdf = new Dompdf();
 
     $html = view('superadmin/laporan/dataSuster', [
-      'namaLaporan' => 'Laporan Data Suster',
-      'listSuster' => $listAnggota
+      'namaLaporan' => 'Laporan Data Suster (' . $status . ')',
+      'listSuster' => $listAnggota,
+      'status' => ($status == 'meninggal') ? 'meninggal' : ''
     ]);
     $dompdf->loadHtml($html);
     // (Optional) Setup the paper size and orientation
@@ -114,26 +114,41 @@ class Laporan extends BaseController
     $dompdf->stream();
   }
 
-  function dataPenunjang()
+  function dataPenugasan()
   {
+    $idKomunitas = $this->request->getPost('idKomunitas');
+    $namaKomunitas = $this->KomunitasModel->find($idKomunitas);
+    // dd($idKomunitas);
+    // dd($this->RelationTable->getAnggotaPenugasanByKomunitas($idKomunitas));
+    $dompdf = new Dompdf();
 
+    $html = view('superadmin/laporan/dataPenugasan', [
+      'namaLaporan' => 'Laporan Data Penugasan di ' . $namaKomunitas['nama'],
+      'listPenugasan' => $this->RelationTable->getAnggotaPenugasanByKomunitas($idKomunitas),
+    ]);
+    $dompdf->loadHtml($html);
+    // (Optional) Setup the paper size and orientation
+    $dompdf->setPaper('A4', 'landscape');
+
+    // Render the HTML as PDF
+    $dompdf->render();
+
+    // Output the generated PDF to Browser
+    $dompdf->stream();
+  }
+
+  function dataPembinaan()
+  {
+    $idPembinaan = $this->request->getPost('idPembinaan');
+    $namaPembinaan = $this->TahapPembinaanModel->find($idPembinaan)['nama'];
     // dd('test');
     $dompdf = new Dompdf();
-    if ($this->request->getPost('penunjang') == 'pembinaan') {
-      $html = view('superadmin/laporan/dataPembinaan', [
-        'namaLaporan' => 'Laporan Data Pembinaan',
-        'listPembinaan' => $this->RelationTable->getAnggotaPembinaan(),
-        'listTahapPembinaan' => $this->TahapPembinaanModel->findAll(),
-      ]);
-    }
+    $html = view('superadmin/laporan/dataPembinaan', [
+      'namaLaporan' => 'Laporan Data Pembinaan di ' . $namaPembinaan,
+      'listPembinaan' => $this->RelationTable->getAnggotaPembinaanByidPembinaan($idPembinaan),
+      'komunitas' => $this->TahapPembinaanModel->findAll(),
+    ]);
 
-    if ($this->request->getPost('penunjang') == 'penugasan') {
-      $html = view('superadmin/laporan/dataPenugasan', [
-        'namaLaporan' => 'Laporan Data Penugasan',
-        'listPenugasan' => $this->RelationTable->getAnggotaPenugasan(),
-        'listKomunitas' => $this->KomunitasModel->findAll(),
-      ]);
-    }
     $dompdf->loadHtml($html);
     // (Optional) Setup the paper size and orientation
     $dompdf->setPaper('A4', 'landscape');

@@ -45,15 +45,15 @@ class Anggota extends BaseController
 
     function PengajuanPage()
     {
-        $nomorBajuTerakhir = $this->AnggotaModel->orderBy('nomorBaju', 'DESC')->first();
-        // dd($nomorBajuTerakhir['nomorBaju']);
-        $nomorBajuBaru = sprintf("%04s", $nomorBajuTerakhir['nomorBaju'] + 1);
+        // $nomorBajuTerakhir = $this->AnggotaModel->orderBy('nomorBaju', 'DESC')->first();
+        // // dd($nomorBajuTerakhir['nomorBaju']);
+        // $nomorBajuBaru = sprintf("%04s", $nomorBajuTerakhir['nomorBaju'] + 1);
 
-        return view('superadmin/anggota', [
+        return view('superadmin/anggotaPengajuan', [
             'judul' => 'Keanggotaan',
-            'nomorBajuBaru' => $nomorBajuBaru,
+            // 'nomorBajuBaru' => $nomorBajuBaru,
             'validation' => \Config\Services::validation(),
-            'listAnggota' => $this->RelationTable->getAnggotaAllWithoutRoleSuperAdmin(),
+            'listAnggota' => $this->RelationTable->getAnggotaAllWithoutRoleStatusPenugasanAllSuperAdmin(),
             'komunitas' => $this->KomunitasModel->findAll(),
             'riwayatPenugasan' => $this->RelationTable->riwayatPenugasan(),
             'tahapPembinaan' => $this->RelationTable->tahapPembinaan(),
@@ -71,7 +71,6 @@ class Anggota extends BaseController
         $password = password_hash(strval($tanggalLahir), PASSWORD_BCRYPT);
         $nomorTelepon = $this->request->getPost('nomorTelepon');
         $status = $this->request->getPost('status');
-        $role = $this->request->getPost('role');
         $foto = $this->request->getFile('foto');
         $newName = '';
 
@@ -80,6 +79,7 @@ class Anggota extends BaseController
         $tanggalPenugasan = $this->request->getPost('tanggalPenugasan');
         $keteranganPenugasan = $this->request->getPost('keteranganPenugasan');
         $statusPenugasan = $this->request->getPost('statusPenugasan');
+        $role = $this->request->getPost('role');
 
         // pembinaan
         $tanggalPembinaan = $this->request->getPost('tanggalPembinaan');
@@ -115,6 +115,7 @@ class Anggota extends BaseController
             session()->setFlashdata('msg-danger', 'Kepala komunitas hanya boleh satu!!!');
             return redirect()->to('sa/anggota')->withInput();
         }
+        // pimpinan provinsi sudah ada
 
         if ($foto->isValid() && !$foto->hasMoved()) {
             $newName = 'foto-' . $foto->getRandomName();
@@ -132,7 +133,6 @@ class Anggota extends BaseController
             'tanggalLahir' => $tanggalLahir,
             'nomorTelepon' => $nomorTelepon,
             'status' => ($status == 'on') ? 'aktif' : 'non-aktif',
-            'role' => $role,
             'foto' => $newName
         ]);
         $idAnggota = $anggota->getInsertID();
@@ -143,7 +143,8 @@ class Anggota extends BaseController
             'idAnggota' => $idAnggota,
             'tanggalPenugasan' => $tanggalPenugasan,
             'keterangan' => $keteranganPenugasan,
-            'status' => ($statusPenugasan == 'on') ? 'Y' : 'N'
+            'status' => ($statusPenugasan == 'on') ? 'Y' : 'N',
+            'role' => $role,
         ]);
 
         $pembinaan = $this->PembinaanModel;
@@ -263,6 +264,7 @@ class Anggota extends BaseController
         $keteranganPenugasan = $this->request->getPost('keteranganPenugasan');
         $statusPenugasan = $this->request->getPost('statusPenugasan');
         $file = $this->request->getFile('file');
+        $role = $this->request->getPost('role');
 
         $rules = [
             'idKomunitas' => 'required',
@@ -272,6 +274,7 @@ class Anggota extends BaseController
             'file' => [
                 'uploaded[file]',
             ],
+            'role' => 'required',
         ];
 
         if (!$this->validate($rules)) {
@@ -291,6 +294,7 @@ class Anggota extends BaseController
             'keteranganPenugasan' => $keteranganPenugasan,
             'status' => ($statusPenugasan == 'on') ? 'Y' : 'N',
             'file' => $newName,
+            'role' => $role,
         ]);
 
         session()->setFlashdata('msg', 'Data berhasil diubah!!!');
@@ -304,14 +308,22 @@ class Anggota extends BaseController
         $idKomunitas = $this->request->getPost('idKomunitas');
         $tanggalPenugasan = $this->request->getPost('tanggalPenugasan');
         $keteranganPenugasan = $this->request->getPost('keteranganPenugasan');
+        $role = $this->request->getPost('role');
         $statusPenugasan = $this->request->getPost('statusPenugasan');
         $file = $this->request->getFile('file');
-
+        // dd([
+        //     'idKomunitas' => $idKomunitas,
+        //     'idAnggota' => $idAnggota,
+        //     'tanggalPenugasan' => $tanggalPenugasan,
+        //     'keterangan' => $keteranganPenugasan,
+        //     'status' => ($statusPenugasan == 'on') ? 'Y' : 'T',
+        //     // 'file' => $newName,
+        // ]);
         $rules = [
-            'idKomunitas' => 'required',
+            // 'idKomunitas' => 'required',
             'tanggalPenugasan' => 'required',
             'keteranganPenugasan' => 'required',
-            'statusPenugasan' => 'required',
+            // 'statusPenugasan' => 'required',
 
         ];
 
@@ -338,6 +350,7 @@ class Anggota extends BaseController
             'keterangan' => $keteranganPenugasan,
             'status' => ($statusPenugasan == 'on') ? 'Y' : 'T',
             'file' => $newName,
+            'role' => $role,
         ]);
 
         session()->setFlashdata('msg-success', 'Data berhasil diubah!!!');

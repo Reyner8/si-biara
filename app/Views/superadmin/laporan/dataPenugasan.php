@@ -33,22 +33,21 @@
       <th>Nomor Baju</th>
       <th>Nama</th>
       <th>TTL</th>
+      <th>Tanggal Penugasan</th>
+      <th>Keterangan</th>
       <th>Nomor Telp</th>
+      <th>Status</th>
     </tr>
-    <?php foreach ($listKomunitas as $komunitas) : ?>
+    <?php foreach ($listPenugasan as $penugasan) : ?>
       <tr>
-        <td colspan="4" style="background-color: grey;"><?= $komunitas['nama'] ?></td>
+        <td><?= $penugasan['nomorBaju'] ?></td>
+        <td><?= $penugasan['nama'] ?></td>
+        <td><?= $penugasan['tempatLahir'] . ', ' . $penugasan['tanggalLahir'] ?></td>
+        <td><?= $penugasan['tanggalPenugasan'] ?></td>
+        <td><?= $penugasan['keterangan'] ?></td>
+        <td><?= $penugasan['nomorTelepon'] ?></td>
+        <td><?= $penugasan['status'] ?></td>
       </tr>
-      <?php foreach ($listPenugasan as $penugasan) : ?>
-        <?php if ($penugasan['idKomunitas'] == $komunitas['id']) : ?>
-          <tr>
-            <td><?= $penugasan['nomorBaju'] ?></td>
-            <td><?= $penugasan['nama'] ?></td>
-            <td><?= $penugasan['tempatLahir'] . ', ' . $penugasan['tanggalLahir'] ?></td>
-            <td><?= $penugasan['nomorTelepon'] ?></td>
-          </tr>
-        <?php endif; ?>
-      <?php endforeach; ?>
     <?php endforeach; ?>
   </table>
   <!-- Optional JavaScript; choose one of the two! -->

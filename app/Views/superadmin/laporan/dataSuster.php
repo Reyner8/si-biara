@@ -33,16 +33,24 @@
       <th>Kode Baju</th>
       <th>Nama</th>
       <th>Tempat, Tanggal Lahir</th>
+      <th>Tanggal Penugasan</th>
+      <th>Keterangan Penugasan</th>
       <th>Nomor Telepon</th>
-      <th>Status</th>
+      <?php if ($status) : ?>
+        <th>Tanggal Meninggal</th>
+      <?php endif; ?>
     </tr>
     <?php foreach ($listSuster as $suster) : ?>
       <tr>
         <td><?= $suster['nomorBaju'] ?></td>
         <td><?= $suster['nama'] ?></td>
         <td><?= $suster['tempatLahir'] . ', ' . $suster['tanggalLahir'] ?></td>
+        <td><?= $suster['tanggalPenugasan'] ?></td>
+        <td><?= $suster['keterangan'] ?></td>
         <td><?= $suster['nomorTelepon'] ?></td>
-        <td><?= $suster['status'] ?></td>
+        <?php if ($status) : ?>
+          <td><?= $suster['meninggal'] ?></td>
+        <?php endif; ?>
       </tr>
     <?php endforeach; ?>
   </table>

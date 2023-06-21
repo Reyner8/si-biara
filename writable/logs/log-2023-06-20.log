@@ -1,0 +1,245 @@
+CRITICAL - 2023-06-20 12:15:32 --> Undefined variable: nomorBajuBaru
+in APPPATH\Views\superadmin\anggotaPengajuan.php on line 85.
+ 1 APPPATH\Views\superadmin\anggotaPengajuan.php(85): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: nomorBajuBaru', 'APPPATH\\Views\\superadmin\\anggotaPengajuan.php', 85, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\anggotaPengajuan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/anggotaPengajuan', [], true)
+ 5 APPPATH\Controllers\SuperAdmin\Anggota.php(59): view('superadmin/anggotaPengajuan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->PengajuanPage()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-20 12:40:09 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Auth.php on line 52.
+ 1 APPPATH\Controllers\Auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Auth.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->login()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-20 12:45:29 --> Undefined variable: newName
+in APPPATH\Controllers\SuperAdmin\Anggota.php on line 315.
+ 1 APPPATH\Controllers\SuperAdmin\Anggota.php(315): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: newName', 'APPPATH\\Controllers\\SuperAdmin\\Anggota.php', 315, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->updatePenugasan('30')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-20 13:20:31 --> Undefined index: role
+in APPPATH\Views\superadmin\anggota.php on line 305.
+ 1 APPPATH\Views\superadmin\anggota.php(305): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: role', 'APPPATH\\Views\\superadmin\\anggota.php', 305, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/anggota', [], true)
+ 5 APPPATH\Controllers\SuperAdmin\Anggota.php(42): view('superadmin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-20 13:20:39 --> Undefined index: role
+in APPPATH\Views\superadmin\anggotaPengajuan.php on line 167.
+ 1 APPPATH\Views\superadmin\anggotaPengajuan.php(167): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: role', 'APPPATH\\Views\\superadmin\\anggotaPengajuan.php', 167, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\anggotaPengajuan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/anggotaPengajuan', [], true)
+ 5 APPPATH\Controllers\SuperAdmin\Anggota.php(59): view('superadmin/anggotaPengajuan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->PengajuanPage()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-20 13:20:46 --> Undefined index: role
+in APPPATH\Views\superadmin\anggota.php on line 305.
+ 1 APPPATH\Views\superadmin\anggota.php(305): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: role', 'APPPATH\\Views\\superadmin\\anggota.php', 305, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/anggota', [], true)
+ 5 APPPATH\Controllers\SuperAdmin\Anggota.php(42): view('superadmin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-20 13:21:09 --> Undefined index: role
+in APPPATH\Views\superadmin\anggota.php on line 305.
+ 1 APPPATH\Views\superadmin\anggota.php(305): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: role', 'APPPATH\\Views\\superadmin\\anggota.php', 305, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/anggota', [], true)
+ 5 APPPATH\Controllers\SuperAdmin\Anggota.php(42): view('superadmin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-20 13:31:58 --> Undefined index: role
+in APPPATH\Controllers\Auth.php on line 78.
+ 1 APPPATH\Controllers\Auth.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: role', 'APPPATH\\Controllers\\Auth.php', 78, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->login()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-20 13:33:37 --> Undefined index: role
+in APPPATH\Views\superadmin\anggota.php on line 305.
+ 1 APPPATH\Views\superadmin\anggota.php(305): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: role', 'APPPATH\\Views\\superadmin\\anggota.php', 305, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/anggota', [], true)
+ 5 APPPATH\Controllers\SuperAdmin\Anggota.php(42): view('superadmin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-20 13:33:56 --> Undefined index: role
+in APPPATH\Views\superadmin\anggota.php on line 305.
+ 1 APPPATH\Views\superadmin\anggota.php(305): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: role', 'APPPATH\\Views\\superadmin\\anggota.php', 305, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/anggota', [], true)
+ 5 APPPATH\Controllers\SuperAdmin\Anggota.php(42): view('superadmin/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-20 13:38:41 --> Undefined index: role
+in APPPATH\Views\superadmin\anggotaPengajuan.php on line 167.
+ 1 APPPATH\Views\superadmin\anggotaPengajuan.php(167): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: role', 'APPPATH\\Views\\superadmin\\anggotaPengajuan.php', 167, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\anggotaPengajuan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/anggotaPengajuan', [], true)
+ 5 APPPATH\Controllers\SuperAdmin\Anggota.php(59): view('superadmin/anggotaPengajuan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->PengajuanPage()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-06-20 13:46:02 --> mysqli_sql_exception: Unknown column 'a.role' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT penugasa...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT penugasa...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT penugasa...')
+#3 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(295): CodeIgniter\Database\BaseConnection->query('SELECT penugasa...')
+#4 C:\xampp\htdocs\si-biara\app\Controllers\SuperAdmin\Anggota.php(112): App\Models\RelationTable->getAnggotaByRoleKomunitas('1', 'admin')
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->save()
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-06-20 13:46:02 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\RelationTable.php on line 297.
+ 1 APPPATH\Controllers\SuperAdmin\Anggota.php(112): App\Models\RelationTable->getAnggotaByRoleKomunitas('1', 'admin')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->save()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-06-20 13:46:32 --> mysqli_sql_exception: Unknown column 'a.role' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT penugasa...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT penugasa...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT penugasa...')
+#3 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(295): CodeIgniter\Database\BaseConnection->query('SELECT penugasa...')
+#4 C:\xampp\htdocs\si-biara\app\Controllers\SuperAdmin\Anggota.php(112): App\Models\RelationTable->getAnggotaByRoleKomunitas('1', 'admin')
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->save()
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-06-20 13:46:32 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\RelationTable.php on line 295.
+ 1 APPPATH\Controllers\SuperAdmin\Anggota.php(112): App\Models\RelationTable->getAnggotaByRoleKomunitas('1', 'admin')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->save()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-06-20 13:47:13 --> mysqli_sql_exception: Unknown column 'a.role' in 'where clause' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT penugasa...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT penugasa...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT penugasa...')
+#3 C:\xampp\htdocs\si-biara\app\Models\RelationTable.php(295): CodeIgniter\Database\BaseConnection->query('SELECT penugasa...')
+#4 C:\xampp\htdocs\si-biara\app\Controllers\SuperAdmin\Anggota.php(112): App\Models\RelationTable->getAnggotaByRoleKomunitas('1', 'admin')
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->save()
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+#7 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-06-20 13:47:13 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\RelationTable.php on line 295.
+ 1 APPPATH\Controllers\SuperAdmin\Anggota.php(112): App\Models\RelationTable->getAnggotaByRoleKomunitas('1', 'admin')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->save()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-20 18:09:23 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Auth.php on line 52.
+ 1 APPPATH\Controllers\Auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Auth.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->login()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-06-20 19:35:45 --> mysqli_sql_exception: Unknown column 'role' in 'field list' in C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `anggota...', 0)
+#1 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `anggota...')
+#2 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `anggota...')
+#3 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `anggota...', Array, false)
+#4 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\si-biara\app\Controllers\SuperAdmin\Anggota.php(233): CodeIgniter\Model->update('23', Array)
+#8 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\SuperAdmin\Anggota->update('23')
+#9 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Anggota))
+#10 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\si-biara\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\si-biara\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-20 23:33:01 --> syntax error, unexpected ','
+in APPPATH\Controllers\SuperAdmin\Laporan.php on line 50.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\SuperAdmin\\Laporan.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\SuperAdmin\\Laporan')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\SuperAdmin\\Laporan')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\SuperAdmin\\Laporan')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\SuperAdmin\\Laporan', true)
+ 6 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-20 23:33:36 --> Call to a member function findAll() on null
+in APPPATH\Controllers\SuperAdmin\Laporan.php on line 81.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Laporan->dataKomunitas()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Laporan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-20 23:42:20 --> Undefined index: tanggalPenugasan
+in APPPATH\Views\superadmin\laporan\dataSuster.php on line 48.
+ 1 APPPATH\Views\superadmin\laporan\dataSuster.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: tanggalPenugasan', 'APPPATH\\Views\\superadmin\\laporan\\dataSuster.php', 48, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\laporan\\dataSuster.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('superadmin/laporan/dataSuster', [], true)
+ 5 APPPATH\Controllers\SuperAdmin\Laporan.php(53): view('superadmin/laporan/dataSuster', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Laporan->dataSuster()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-20 23:44:23 --> Undefined variable: listAnggota
+in APPPATH\Controllers\SuperAdmin\Laporan.php on line 48.
+ 1 APPPATH\Controllers\SuperAdmin\Laporan.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: listAnggota', 'APPPATH\\Controllers\\SuperAdmin\\Laporan.php', 48, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SuperAdmin\Laporan->dataSuster()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuperAdmin\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

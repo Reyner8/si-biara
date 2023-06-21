@@ -37,6 +37,8 @@
                                 <th>No. Baju</th>
                                 <th>Nama</th>
                                 <th>Komunitas (Tanggal Penugasan)</th>
+                                <th>Role</th>
+                                <th>Status Penugasan</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -47,6 +49,24 @@
                                     <td><?= $anggota['nomorBaju'] ?></td>
                                     <td><?= $anggota['nama'] ?></td>
                                     <td><?= $anggota['namaKomunitas'] . '(' . $anggota['tanggalPenugasan'] . ')' ?></td>
+                                    <td>
+                                        <?php if ($anggota['role'] == 'superadmin') : ?>
+                                            <?= 'Pimpinan Provinsi' ?>
+                                        <?php elseif ($anggota['role'] == 'admin') : ?>
+                                            <?= 'Pimpinan Komunitas' ?>
+                                        <?php else : ?>
+                                            <?= 'Anggota' ?>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td>
+                                        <?php if ($anggota['statusPenugasan'] == 'Y') : ?>
+                                            <span class="badge bg-success"> <?= 'Disetujui' ?></span>
+                                        <?php elseif ($anggota['statusPenugasan'] == 'T') : ?>
+                                            <span class="badge bg-danger"> <?= 'Tidak Disetujui' ?></span>
+                                        <?php else : ?>
+                                            <span class="badge bg-info"> <?= 'Menunggu' ?></span>
+                                        <?php endif; ?>
+                                    </td>
                                     <td>
                                         <span class="badge bg-<?= ($anggota['status'] == 'aktif') ? 'success' : 'danger' ?>"> <?= $anggota['status'] ?></span>
                                     </td>
@@ -121,15 +141,7 @@
                                 <input id="nomorTelepon" type="text" class="form-control" name="nomorTelepon" placeholder="Nomor Telepon anggota..." value="<?= old('nomorTelepon') ?>">
                                 <p class="text-danger"><?= $validation->getError('nomorTelepon') ?></p>
                             </div>
-                            <div class="col">
-                                <label for="role" class="form-label">Role</label>
-                                <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="role">
-                                    <option selected>Open this select menu</option>
-                                    <option value="superadmin">Pimpinan Provinsi</option>
-                                    <option value="admin">Pimpinan Komunitas</option>
-                                    <option value="anggota">Anggota Komunitas</option>
-                                </select>
-                            </div>
+
                         </div>
                     </div>
 
@@ -153,6 +165,16 @@
                             <?php foreach ($komunitas as $k) : ?>
                                 <option value="<?= $k['id'] ?>"><?= $k['nama'] ?></option>
                             <?php endforeach; ?>
+                        </select>
+                    </div>
+
+                    <div class="col">
+                        <label for="role" class="form-label">Komunitas</label>
+                        <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="role">
+                            <option selected>Open this select menu</option>
+                            <option value="superadmin">Pimpinan Provinsi</option>
+                            <option value="admin">Pimpinan Komunitas</option>
+                            <option value="user">Anggota</option>
                         </select>
                     </div>
 
@@ -257,36 +279,7 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <th>Status</th>
-                                            <th>:</th>
-                                            <td>
-                                                <select id="role" class="form-select" aria-label="Default select example" name="status">
-                                                    <option selected>Open this select menu</option>
-                                                    <?php if ($modal['status'] == 'aktif') : ?>
-                                                        <option value="aktif" selected>Aktif</option>
-                                                        <option value="non-aktif">Non Aktif</option>
-                                                        <option value="eksklaustrasi">Eksklaustrasi</option>
-                                                        <option value="meninggal">Meninggal</option>
-                                                    <?php elseif ($modal['status'] == 'non-aktif') : ?>
-                                                        <option value="aktif">Aktif</option>
-                                                        <option value="non-aktif" selected>Non Aktif</option>
-                                                        <option value="eksklaustrasi">Eksklaustrasi</option>
-                                                        <option value="meninggal">Meninggal</option>
-                                                    <?php elseif ($modal['status'] == 'eksklaustrasi') : ?>
-                                                        <option value="aktif">Aktif</option>
-                                                        <option value="non-aktif">Non Aktif</option>
-                                                        <option value="eksklaustrasi" selected>Eksklaustrasi</option>
-                                                        <option value="meninggal">Meninggal</option>
-                                                    <?php elseif ($modal['status'] == 'meninggal') : ?>
-                                                        <option value="aktif">Aktif</option>
-                                                        <option value="non-aktif">Non Aktif</option>
-                                                        <option value="eksklaustrasi">Eksklaustrasi</option>
-                                                        <option value="meninggal" selected>Meninggal</option>
-                                                    <?php endif; ?>
-                                                </select>
-                                            </td>
-                                        </tr>
+
                                         <tr>
                                             <th>Berkas</th>
                                             <th>:</th>
@@ -296,28 +289,7 @@
                                             </td>
                                         </tr>
 
-                                        <tr>
-                                            <th>Role</th>
-                                            <th>:</th>
-                                            <td>
-                                                <select id="role" class="form-select" aria-label="Default select example" name="role">
-                                                    <option selected>Open this select menu</option>
-                                                    <?php if ($modal['role'] == 'admin') : ?>
-                                                        <option value="superadmin">Pimpinan Provinsi</option>
-                                                        <option selected value="admin">Kepala Komunitas</option>
-                                                        <option value="user">Anggota Komunitas</option>
-                                                    <?php elseif ($modal['role'] == 'superadmin') : ?>
-                                                        <option selected value="superadmin">Pimpinan Provinsi</option>
-                                                        <option value="admin">Kepala Komunitas</option>
-                                                        <option value="user">Anggota Komunitas</option>
-                                                    <?php else : ?>
-                                                        <option value="superadmin">Pimpinan Provinsi</option>
-                                                        <option value="admin">Kepala Komunitas</option>
-                                                        <option selected value="user">Anggota Komunitas</option>
-                                                    <?php endif; ?>
-                                                </select>
-                                            </td>
-                                        </tr>
+
 
                                         <tr>
                                             <th>Nomor Telepon</th>

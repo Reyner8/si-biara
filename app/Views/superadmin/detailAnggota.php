@@ -75,6 +75,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Komunitas</th>
+                                    <th>Role</th>
                                     <th>Tanggal (Bertugas)</th>
                                     <th>Action</th>
                                 </tr>
@@ -88,6 +89,15 @@
                                                                 echo 'clock text-info';
                                                             } ?>"></i></td>
                                         <td><?= $lp['nama'] ?></td>
+                                        <td>
+                                            <?php if ($lp['role'] == 'superadmin') : ?>
+                                                <?= 'Pimpinan Provinsi' ?>
+                                            <?php elseif ($lp['role'] == 'admin') : ?>
+                                                <?= 'Pimpinan Provinsi' ?>
+                                            <?php else : ?>
+                                                <?= 'Anggota' ?>
+                                            <?php endif; ?>
+                                        </td>
                                         <td><?= $lp['tanggalPenugasan'] ?></td>
                                         <td>
                                             <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#detail-penugasan-<?= $lp['id'] ?>" <?= ($anggota['status'] == 'eksklaustrasi') ? 'disabled' : '' ?>><i class="fa fa-info"></i></button>
@@ -167,6 +177,15 @@
                         <label for="tanggalPenugasan" class="form-label">Tanggal Ditugaskan</label>
                         <input id="tanggalPenugasan" type="date" class="form-control" name="tanggalPenugasan" value="<?= old('tanggalPenugasan') ?>">
                         <p class="text-danger"><?= $validation->getError('tanggalPenugasan') ?></p>
+                    </div>
+                    <div class="col">
+                        <label for="role" class="form-label">Role</label>
+                        <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="role">
+                            <option selected>Open this select menu</option>
+                            <option value="superadmin">Pimpinan Provinsi</option>
+                            <option value="admin">Pimpinan Komunitas</option>
+                            <option value="anggota">Anggota Komunitas</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="keterangan" class="form-label">Keterangan</label>

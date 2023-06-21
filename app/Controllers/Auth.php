@@ -7,9 +7,11 @@ use App\Controllers\BaseController;
 class Auth extends BaseController
 {
     protected $RelationTable;
+    protected $AdminModel;
     function __construct()
     {
         $this->RelationTable = new \App\Models\RelationTable();
+        $this->AdminModel = new \App\Models\AdminModel();
     }
     public function index()
     {
@@ -41,15 +43,34 @@ class Auth extends BaseController
             // ->with('validation', $validation);
         }
 
+        if ($role == 'superuser') {
+            $getAdmin = $this->AdminModel->find(1);
+            if ($getAdmin) {
+                // check password valid
+                if (!password_verify($password, $getAdmin['password'])) {
+                    session()->setFlashdata('msg', 'Username atau Password salah!!!');
+                    return redirect()->to('auth')->withInput();
+                }
+                session()->set([
+                    'idAnggota' => $getAdmin['id'],
+                    'username' => $getAdmin['username'],
+                    'komunitas' => 'none',
+                    'role' => 'superuser'
+                ]);
+                return redirect()->to('sa/beranda');
+            }
+        }
+
+
         $AnggotaModel = new \App\Models\AnggotaModel();
         // $PenugasanModel = new \App\Models\PenugasanModel();
         $getDataAnggota = $AnggotaModel->where('nomorBaju', $username)->first();
         if ($getDataAnggota) {
-            $getPenugasan = $this->RelationTable->getAnggotaByAnggota($getDataAnggota['id']);
+            $getPenugasan = $this->RelationTable->getAnggotaAuth($getDataAnggota['id']);
             // dd($getPenugasan['idKomunitas']);
         }
 
-        if ($getDataAnggota['role'] != $role) {
+        if ($getPenugasan['role'] != $role) {
             session()->setFlashdata('msg', 'Username tidak sesuai dengan hak akses anda!!!');
             return redirect()->to('auth')->withInput();
         }
@@ -75,11 +96,12 @@ class Auth extends BaseController
             'idAnggota' => $getDataAnggota['id'],
             'username' => $getDataAnggota['nomorBaju'],
             'komunitas' => ($getPenugasan == null) ? 'none' : $getPenugasan['idKomunitas'],
-            'role' => $getDataAnggota['role']
+            'role' => $getPenugasan['role']
         ]);
-        if ($getDataAnggota['role'] == 'superuser' || $getDataAnggota['role'] == 'superadmin') {
+
+        if ($getPenugasan['role'] == 'superadmin') {
             return redirect()->to('sa/beranda');
-        } elseif ($getDataAnggota['role'] == 'admin') {
+        } elseif ($getPenugasan['role'] == 'admin') {
             return redirect()->to('admin/beranda');
         } else {
             return redirect()->to('user/beranda');

@@ -50,6 +50,10 @@ $routes->group('/kerasulan', static function ($routes) {
     $routes->get('/', 'Kerasulan::index');
 });
 
+$routes->group('/komunitas', static function ($routes) {
+    $routes->get('/', 'Komunitas::index');
+});
+
 $routes->group('/pembinaan', static function ($routes) {
     $routes->get('/', 'Pembinaan::index');
 });
@@ -265,7 +269,8 @@ $routes->group('/sa', ['filter' => 'authFilter'], static function ($routes) {
             $routes->post('suster', 'SuperAdmin\Laporan::dataSuster');
             $routes->post('komunitas', 'SuperAdmin\Laporan::dataKomunitas');
             $routes->post('belajar', 'SuperAdmin\Laporan::dataHasilBelajar');
-            $routes->post('penunjang', 'SuperAdmin\Laporan::dataPenunjang');
+            $routes->post('penugasan', 'SuperAdmin\Laporan::dataPenugasan');
+            $routes->post('pembinaan', 'SuperAdmin\Laporan::dataPembinaan');
         });
     });
 });

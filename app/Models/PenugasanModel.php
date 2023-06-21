@@ -12,5 +12,5 @@ class PenugasanModel extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
-    protected $allowedFields = ['idAnggota', 'idKomunitas', 'tanggalPenugasan', 'keterangan', 'status'];
+    protected $allowedFields = ['idAnggota', 'idKomunitas', 'tanggalPenugasan', 'keterangan', 'status', 'file', 'role'];
 }

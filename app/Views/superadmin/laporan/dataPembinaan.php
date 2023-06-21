@@ -33,22 +33,23 @@
       <th>Nomor Baju</th>
       <th>Nama</th>
       <th>TTL</th>
+      <th>Komunitas</th>
+      <th>Tanggal Pembinaan</th>
+      <th>Keterangan</th>
       <th>Nomor Telp</th>
+      <th>Status</th>
     </tr>
-    <?php foreach ($listTahapPembinaan as $tahapPembinaan) : ?>
+    <?php foreach ($listPembinaan as $pembinaan) : ?>
       <tr>
-        <td colspan="4" style="background-color: grey;"><?= $tahapPembinaan['nama'] ?></td>
+        <td><?= $pembinaan['nomorBaju'] ?></td>
+        <td><?= $pembinaan['nama'] ?></td>
+        <td><?= $pembinaan['tempatLahir'] . ', ' . $pembinaan['tanggalLahir'] ?></td>
+        <td><?= $pembinaan['namaKomunitas'] ?></td>
+        <td><?= $pembinaan['tanggalPembinaan'] ?></td>
+        <td><?= $pembinaan['keterangan'] ?></td>
+        <td><?= $pembinaan['nomorTelepon'] ?></td>
+        <td><?= $pembinaan['status'] ?></td>
       </tr>
-      <?php foreach ($listPembinaan as $pembinaan) : ?>
-        <?php if ($pembinaan['idTahapPembinaan'] == $tahapPembinaan['id']) : ?>
-          <tr>
-            <td><?= $pembinaan['nomorBaju'] ?></td>
-            <td><?= $pembinaan['nama'] ?></td>
-            <td><?= $pembinaan['tempatLahir'] . ', ' . $pembinaan['tanggalLahir'] ?></td>
-            <td><?= $pembinaan['nomorTelepon'] ?></td>
-          </tr>
-        <?php endif; ?>
-      <?php endforeach; ?>
     <?php endforeach; ?>
   </table>
   <!-- Optional JavaScript; choose one of the two! -->
