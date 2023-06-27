@@ -7,6 +7,7 @@ use App\Controllers\BaseController;
 class Kegiatan extends BaseController
 {
     protected $KegiatanModel;
+    protected $KomunitasModel;
     protected $RelationTable;
     protected $ProvinsiModel;
     protected $GaleriModel;
@@ -16,6 +17,7 @@ class Kegiatan extends BaseController
     public function __construct()
     {
         $this->KegiatanModel = new \App\Models\KegiatanModel();
+        $this->KomunitasModel = new \App\Models\KomunitasModel();
         $this->GaleriModel = new \App\Models\GaleriModel();
         $this->RelationTable = new \App\Models\RelationTable();
         $this->ProvinsiModel = new \App\Models\ProvinsiModel();
@@ -29,7 +31,8 @@ class Kegiatan extends BaseController
             'judul' => 'Kegiatan Komunitas',
             'kegiatan' => $this->dataKegiatan,
             'validation' => \Config\Services::validation(),
-            'listKegiatan' => $this->KegiatanModel->where('idAnggota', session()->get('idAnggota'))->findAll(),
+            'listKegiatan' => $this->RelationTable->getKegiatan(),
+            'listKomunitas' => $this->KomunitasModel->findAll(),
             'isEdit' => false
         ];
         return view('SuperAdmin/kegiatan', $data);
@@ -37,11 +40,12 @@ class Kegiatan extends BaseController
 
     public function save()
     {
+        $idKomunitas = $this->request->getPost('idKomunitas');
         $judul = $this->request->getPost('judul');
         $deskripsi = $this->request->getPost('deskripsi');
         $tanggal = $this->request->getPost('tanggal');
         $thumbnail = $this->request->getFile('thumbnail');
-
+        // dd($idKomunitas);
         if (!$this->validate([
             'judul' => 'required',
             'deskripsi' => 'required',
@@ -58,9 +62,15 @@ class Kegiatan extends BaseController
             $newName = 'thumbnail-' . $thumbnail->getRandomName();
             $thumbnail->move($this->GaleriPath, $newName);
         }
-
+        // dd([
+        //     'idKomunitas' => $idKomunitas,
+        //     'judul' =>  $judul,
+        //     'deskripsi' =>  $deskripsi,
+        //     'tanggal' =>  $tanggal,
+        //     'thumbnail' => $newName
+        // ]);
         $this->KegiatanModel->insert([
-            'idAnggota' => session()->get('idAnggota'),
+            'idKomunitas' => $idKomunitas,
             'judul' =>  $judul,
             'deskripsi' =>  $deskripsi,
             'tanggal' =>  $tanggal,
@@ -77,11 +87,12 @@ class Kegiatan extends BaseController
             'judul' => 'Kegiatan Komunitas',
             'kegiatan' => $this->dataKegiatan,
             'validation' => \Config\Services::validation(),
-            'listKegiatan' => $this->KegiatanModel->where('idAnggota', session()->get('idAnggota'))->findAll(),
+            'listKegiatan' => $this->RelationTable->getKegiatan(),
+            'listKomunitas' => $this->KomunitasModel->findAll(),
             'dataEdit' => $this->KegiatanModel->find($id),
             'isEdit' => true
         ];
-        return view('sa/kegiatan', $data);
+        return view('superadmin/kegiatan', $data);
     }
 
     public function update($id)
@@ -89,6 +100,7 @@ class Kegiatan extends BaseController
         $judul = $this->request->getPost('judul');
         $deskripsi = $this->request->getPost('deskripsi');
         $tanggal = $this->request->getPost('tanggal');
+        $idKomunitas = $this->request->getPost('idKomunitas');
         $thumbnail = $this->request->getFile('thumbnail');
         $newName = '';
 
@@ -96,9 +108,7 @@ class Kegiatan extends BaseController
             'judul' => 'required',
             'deskripsi' => 'required',
             'tanggal' => 'required',
-            'thumbnail' => [
-                'uploaded[thumbnail]',
-            ],
+
         ])) {
             session()->setFlashdata('msg-danger', 'Data gagal diubah!!!');
             return redirect()->to('sa/kegiatan/edit/' . $id)->withInput();
@@ -114,6 +124,7 @@ class Kegiatan extends BaseController
         }
 
         $this->KegiatanModel->update($id, [
+            'idKomunitas' =>  $idKomunitas,
             'judul' =>  $judul,
             'deskripsi' =>  $deskripsi,
             'tanggal' =>  $tanggal,
@@ -140,7 +151,7 @@ class Kegiatan extends BaseController
             'idKegiatan' => $idKegiatan,
             'listGaleri' => $this->GaleriModel->where('idKegiatan', $idKegiatan)->findAll()
         ];
-        return view('sa/galeri', $data);
+        return view('superadmin/galeri', $data);
     }
 
     public function saveGaleri($idKegiatan)

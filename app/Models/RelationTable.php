@@ -16,15 +16,17 @@ class RelationTable
 
     public function getArsip()
     {
-        return $this->db->table('arsip')->select('arsip.*, provinsi.nama AS namaProvinsi')
-            ->join('provinsi', 'provinsi.id = arsip.idProvinsi')
-            ->get()->getResultArray();
+        return $this->db->table('arsipKomunitas')
+            ->select('arsipKomunitas.*, komunitas.nama AS namaKomunitas')
+            ->join('komunitas', 'komunitas.id = arsipKomunitas.idKomunitas')
+            ->get()
+            ->getResultArray();
     }
 
     public function getKegiatan()
     {
-        return $this->db->table('kegiatan')->select('kegiatan.*, anggota.nama, anggota.foto')
-            ->join('anggota', 'anggota.id = kegiatan.idAnggota')
+        return $this->db->table('kegiatan')->select('kegiatan.*, komunitas.nama')
+            ->join('komunitas', 'komunitas.id = kegiatan.idKomunitas')
             ->get()->getResultArray();
     }
     public function getHasilBelajar()
@@ -68,27 +70,35 @@ class RelationTable
 
     public function listKegiatan()
     {
-        return $this->db->table('kegiatan')->select('kegiatan.*, anggota.nama AS namaAnggota, anggota.foto , galeri.id AS idGaleri, galeri.foto')
+        return $this->db->table('kegiatan')->select('kegiatan.*, komunitas.nama AS namaKomunitas , galeri.id AS idGaleri, galeri.foto')
             ->select('kegiatan.*, anggota.nama AS namaAnggota')
-            ->join('anggota', 'anggota.id = kegiatan.idAnggota')
+            ->join('komunitas', 'komunitas.id = kegiatan.idKomunitas')
             ->join('galeri', 'galeri.idKegiatan = kegiatan.id')
             ->get()->getResultArray();
     }
 
     public function listKegiatanNew()
     {
-        return $this->db->table('kegiatan')->select('kegiatan.*, anggota.nama AS namaAnggota, anggota.foto')
-            ->join('anggota', 'anggota.id = kegiatan.idAnggota')
+        return $this->db->table('kegiatan')->select('kegiatan.*, komunitas.nama AS namaKomunitas')
+            ->join('komunitas', 'komunitas.id = kegiatan.idKomunitas')
             // ->join('galeri', 'galeri.idKegiatan = kegiatan.id')
             ->get()->getResultArray();
     }
 
     public function getKegiatanById($id)
     {
-        return $this->db->table('kegiatan')->select('kegiatan.*, anggota.nama AS namaAnggota, anggota.foto')
-            ->join('anggota', 'anggota.id = kegiatan.idAnggota')
+        return $this->db->table('kegiatan')->select('kegiatan.*, komunitas.nama AS namaKomunitas')
+            ->join('komunitas', 'komunitas.id = kegiatan.idKomunitas')
             ->where('kegiatan.id', $id)
             ->get()->getRowArray();
+    }
+
+    public function getKegiatanByIdKom($id)
+    {
+        return $this->db->table('kegiatan')->select('kegiatan.*, komunitas.nama AS namaKomunitas')
+            ->join('komunitas', 'komunitas.id = kegiatan.idKomunitas')
+            ->where('komunitas.id', $id)
+            ->get()->getResultArray();
     }
 
 
@@ -116,11 +126,11 @@ class RelationTable
 
     public function latestKegiatan()
     {
-        return $this->db->table('kegiatan')->select('kegiatan.*, anggota.nama AS namaAnggota, galeri.id AS idGaleri, galeri.foto')
-            ->select('kegiatan.*, anggota.nama AS namaAnggota')
-            ->join('anggota', 'anggota.id = kegiatan.idAnggota')
-            ->join('galeri', 'galeri.idKegiatan = kegiatan.id')
-            ->orderBy('tanggal', 'DESC')
+        return $this->db->table('kegiatan')->select('kegiatan.*, komunitas.nama AS namaKomunitas')
+            ->select('kegiatan.*, komunitas.nama AS namaAnggota')
+            ->join('komunitas', 'komunitas.id = kegiatan.idKomunitas')
+            // ->join('galeri', 'galeri.idKegiatan = kegiatan.id')
+            ->orderBy('kegiatan.tanggal', 'DESC')
             ->get()->getRowArray();
     }
 
@@ -282,6 +292,21 @@ class RelationTable
         JOIN komunitas ON komunitas.id = penugasan.idKomunitas
         ")->getResultArray();
     }
+
+    public function checkSuperAdmin($role)
+    {
+        return $this->db->query("SELECT penugasan.idKomunitas, penugasan.idAnggota, p.tanggalPenugasan, penugasan.keterangan, penugasan.status AS statusPenugasan, penugasan.role, komunitas.nama AS namaKomunitas, a.*
+        FROM anggota a
+        JOIN (
+            SELECT idAnggota, MAX(penugasan.tanggalPenugasan) AS tanggalPenugasan
+            FROM penugasan where status = 'Y'
+            GROUP BY idAnggota
+        ) p ON a.id = p.idAnggota
+        JOIN penugasan ON penugasan.idAnggota = a.id AND p.tanggalPenugasan = penugasan.tanggalPenugasan
+        JOIN komunitas ON komunitas.id = penugasan.idKomunitas
+        WHERE penugasan.role = '$role'")->getRowArray();
+    }
+
 
     public function getAnggotaByRoleAndKomunitas($idKomunitas)
     {

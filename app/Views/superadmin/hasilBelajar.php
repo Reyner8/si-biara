@@ -137,6 +137,19 @@
                     </div>
 
                     <div class="mb-3">
+                        <label for="semester" class="form-label">Semester</label>
+                        <input type="number" class="form-control" name="semester" placeholder="semester...">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="keterangan" class="form-label">Keterangan</label>
+                        <select name="keterangan" id="keterangan" class="form-control">
+                            <option value="lulus">Lulus</option>
+                            <option value="tidak-lulus">Tidak Lulus</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
                         <label for="file" class="form-label">File</label>
                         <input type="file" class="form-control" name="file">
                     </div>

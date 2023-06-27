@@ -12,5 +12,5 @@ class PembinaanModel extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
-    protected $allowedFields = ['idAnggota', 'idTahapPembinaan', 'tanggalPembinaan', 'keterangan', 'status'];
+    protected $allowedFields = ['idAnggota', 'idTahapPembinaan', 'tanggalPembinaan', 'keterangan', 'status', 'file'];
 }

@@ -12,5 +12,5 @@ class AnggotaModel extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
-    protected $allowedFields = ['nama', 'nomorBaju', 'password', 'status', 'tempatLahir', 'tanggalLahir', 'nomorTelepon', 'role', 'foto'];
+    protected $allowedFields = ['nama', 'nomorBaju', 'password', 'status', 'tempatLahir', 'tanggalLahir', 'nomorTelepon', 'status', 'foto', 'berkasTerkait', 'meninggal'];
 }

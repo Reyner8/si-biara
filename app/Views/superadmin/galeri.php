@@ -18,14 +18,14 @@
     </div>
     <div class="row">
         <div class="col-md-12 mb-3">
-            <a href="/admin/kegiatan" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Kembali</a>
+            <a href="/sa/kegiatan" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Kembali</a>
         </div>
         <!-- forms -->
         <div class="col-md-4">
             <div class="card shadow p-3 mb-5 bg-body rounded">
                 <div class="card-body">
                     <h5 class="card-title">Forms</h5>
-                    <form action="/admin/galeri/<?= $idKegiatan ?>" method="post" enctype="multipart/form-data">
+                    <form action="/sa/galeri/<?= $idKegiatan ?>" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="foto" class="form-label">Foto</label>
                             <input class="form-control" type="file" id="foto" name="foto[]" multiple>

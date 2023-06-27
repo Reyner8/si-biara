@@ -144,6 +144,7 @@ class Anggota extends BaseController
             'tanggalPenugasan' => $tanggalPenugasan,
             'keterangan' => $keteranganPenugasan,
             'status' => ($statusPenugasan == 'on') ? 'Y' : 'N',
+            'file' => $newName,
             'role' => $role,
         ]);
 
@@ -170,7 +171,7 @@ class Anggota extends BaseController
         $nomorTelepon = $this->request->getPost('nomorTelepon');
         $password = $this->request->getPost('password');
         $status = $this->request->getPost('status');
-        $role = $this->request->getPost('role');
+        $tanggalMeninggal = $this->request->getPost('meninggal');
         $anggota = $this->AnggotaModel->find($id);
         $foto = $this->request->getFile('foto');
         $file = $this->request->getFile('file');
@@ -194,14 +195,6 @@ class Anggota extends BaseController
             return redirect()->to('sa/anggota')->withInput();
         }
 
-        $idKomunitas = $this->RelationTable->getAnggotaByIdAnggota($anggota['id'])['idKomunitas'];
-
-        $getAnggotaByRole = $this->RelationTable->getAnggotaByRoleAndKomunitas($idKomunitas);
-        if ($getAnggotaByRole && $role == 'admin') {
-            session()->setFlashdata('msg-danger', 'Kepala komunitas hanya boleh satu!!!');
-            return redirect()->to('sa/anggota')->withInput();
-        }
-
         if ($foto == '') {
             $newName = $anggota['foto'];
         }
@@ -217,11 +210,21 @@ class Anggota extends BaseController
         }
 
         if ($file->isValid() && !$file->hasMoved()) {
-            $newName = 'file-' . $file->getRandomName();
-            $file->move('upload/berkas', $newName);
-            unlink('upload/berkas/' . $anggota['berkasTerkait']);
+            $newNameFile = 'file-' . $file->getRandomName();
+            $file->move('upload/berkas', $newNameFile);
+            // unlink('upload/berkas/' . $anggota['berkasTerkait']);
         }
-
+        // dd([
+        //     'nama' => $nama,
+        //     'password' => $password,
+        //     'tempatLahir' => $tempatLahir,
+        //     'tanggalLahir' => $tanggalLahir,
+        //     'nomorTelepon' => $nomorTelepon,
+        //     'status' => $status,
+        //     'berkasTerkait' => $newNameFile,
+        //     'foto' => $newName,
+        //     'meninggal' => $tanggalMeninggal
+        // ]);
         $this->AnggotaModel->update($id, [
             'nama' => $nama,
             'password' => $password,
@@ -230,8 +233,8 @@ class Anggota extends BaseController
             'nomorTelepon' => $nomorTelepon,
             'status' => $status,
             'berkasTerkait' => $newNameFile,
-            'role' => $role,
-            'foto' => $newName
+            'foto' => $newName,
+            'meninggal' => $tanggalMeninggal
         ]);
 
         session()->setFlashdata('msg', 'Data berhasil diubah!!!');
@@ -281,6 +284,10 @@ class Anggota extends BaseController
             session()->setFlashdata('msg-danger', 'Data gagal ditambahkan!!!');
             return redirect()->to('sa/anggota/detail/' . $idAnggota)->withInput();
         }
+
+        // $getSuperadmin = $this->RelationTable->checkSuperAdmin('superadmin');
+        // if ($getSuperadmin) {
+        // }
 
         if ($file->isValid() && !$file->hasMoved()) {
             $newName = 'penugasan-' . $file->getRandomName();
@@ -340,7 +347,7 @@ class Anggota extends BaseController
 
         if ($file->isValid() && !$file->hasMoved()) {
             $newName = 'penugasan-' . $file->getRandomName();
-            // $file->move('upload/penugasan', $newName);
+            $file->move('upload/penugasan', $newName);
         }
         // dd($newName);
         $this->PenugasanModel->update($idPenugasan, [

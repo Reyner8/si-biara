@@ -65,6 +65,8 @@
                                     <th>Fakultas</th>
                                     <th>Program Studi</th>
                                     <th>Jenjang</th>
+                                    <th>Semester</th>
+                                    <th>Keterangan</th>
                                     <th>File</th>
                                     <th>Action</th>
                                 </tr>
@@ -74,6 +76,8 @@
                                         <td><?= $hb['fakultas'] ?></td>
                                         <td><?= $hb['prodi'] ?></td>
                                         <td><?= $hb['jenjang'] ?></td>
+                                        <td><?= $hb['semester'] ?></td>
+                                        <td><?= $hb['keterangan'] ?></td>
                                         <td>
                                             <a href="/upload/belajar/<?= $hb['file'] ?>">Download</a>
 
@@ -129,6 +133,20 @@
                             <option value="S1">S1</option>
                             <option value="S2">S2</option>
                             <option value="S3">S3</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="semester" class="form-label">Semester</label>
+                        <input type="number" class="form-control" name="semester" placeholder="semester...">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="keterangan" class="form-label">Keterangan</label>
+                        <select name="keterangan" id="keterangan" class="form-control">
+                            <option value="lulus">Lulus</option>
+                            <option value="tidak-lulus">Tidak Lulus</option>
+
                         </select>
                     </div>
 

@@ -127,14 +127,14 @@ $textCarousel = ''; ?>
             <img class="card-img-top" src="/upload/galeri/<?= $kegiatan['thumbnail'] ?>" alt="thumbnail" />
             <div class="card-body p-4">
               <div class="badge bg-primary bg-gradient rounded-pill mb-2">Kegiatan</div>
-              <a class="text-decoration-none link-dark stretched-link" href="#!">
+              <a class="text-decoration-none link-dark stretched-link" href="/kegiatan/<?= $kegiatan['id'] ?>">
                 <h5 class="card-title mb-3"><?= $kegiatan['judul'] ?></h5>
               </a>
               <p class="card-text mb-0"><?= implode(" ", array_slice(explode(" ", $kegiatan['deskripsi']), 0, 10));  ?>
               <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                 <div class="d-flex align-items-end justify-content-between">
                   <div class="d-flex align-items-center">
-                    <img class="rounded-circle me-3" width="40" height="40" src="/upload/profil/<?= $kegiatan['foto'] ?>" alt="profil" />
+
                     <div class="small">
                       <div class="fw-bold"><?= $kegiatan['nama'] ?></div>
                       <div class="text-muted"><?= $kegiatan['tanggal'] ?></div>

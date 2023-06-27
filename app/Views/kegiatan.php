@@ -57,9 +57,8 @@
             <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
               <div class="d-flex align-items-end justify-content-between">
                 <div class="d-flex align-items-center">
-                  <img class="rounded-circle me-3" width="50" height="50" src="/upload/profil/<?= $kegiatan['foto'] ?>" alt="<?= $kegiatan['foto'] ?>" />
                   <div class="small">
-                    <div class="fw-bold"><?= $kegiatan['namaAnggota'] ?></div>
+                    <div class="fw-bold"><?= $kegiatan['namaKomunitas'] ?></div>
                     <div class="text-muted"><?= $kegiatan['tanggal'] ?></div>
                   </div>
                 </div>

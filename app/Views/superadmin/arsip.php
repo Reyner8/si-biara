@@ -34,7 +34,7 @@
                     <table id="datatable" class="table border-dark">
                         <thead class="text-center">
                             <tr>
-                                <th>Provinsi</th>
+                                <th>Komunitas</th>
                                 <th>Nama</th>
                                 <th>Tanggal</th>
                                 <th>Jenis File</th>
@@ -45,7 +45,7 @@
                         <tbody>
                             <?php foreach ($listArsip as $arsip) : ?>
                                 <tr>
-                                    <td><?= $arsip['namaProvinsi'] ?></td>
+                                    <td><?= $arsip['namaKomunitas'] ?></td>
                                     <td><?= $arsip['nama'] ?></td>
                                     <td><?= $arsip['tanggal'] ?></td>
                                     <td><?= $arsip['jenisFile'] ?></td>
@@ -101,26 +101,14 @@
                         </select>
                     </div>
 
-                    <?php if (session()->get('role') == 'superuser') : ?>
-                        <div class="mb-3">
-                            <label for="idProvinsi" class="form-label">Provinsi</label>
-                            <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="idProvinsi">
-                                <option selected>Open this select menu</option>
-                                <?php foreach ($listProvinsi as $provinsi) : ?>
-                                    <option value="<?= $provinsi['id'] ?>"><?= $provinsi['nama'] ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if (session()->get('role') == 'superadmin') : ?>
-                        <div class="mb-3">
-                            <label for="idProvinsi" class="form-label">Provinsi</label>
-                            <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="idProvinsi" disabled>
-                                <option value="<?= $superAdminData['id'] ?>"><?= $superAdminData['nama'] ?></option>
-                            </select>
-                        </div>
-                    <?php endif; ?>
+                    <div class="mb-3">
+                        <label for="idProvinsi" class="form-label">Provinsi</label>
+                        <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="idKomunitas">
+                            <?php foreach ($listKomunitas as $komunitas) : ?>
+                                <option value="<?= $komunitas['id'] ?>"><?= $komunitas['nama'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
 
                     <div class="mb-3">
                         <label for="file" class="form-label">File</label>
@@ -187,29 +175,18 @@
                             </select>
                         </div>
 
-                        <?php if (session()->get('role') == 'superuser') : ?>
-                            <div class="mb-3">
-                                <label for="idKomunitas" class="form-label">Provinsi</label>
-                                <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="idProvinsi">
-                                    <?php foreach ($listProvinsi as $Provinsi) : ?>
-                                        <?php if ($Provinsi['id'] == $arsip['idProvinsi']) : ?>
-                                            <option selected value="<?= $Provinsi['id'] ?>"><?= $Provinsi['nama'] ?></option>
-                                        <?php else : ?>
-                                            <option value="<?= $Provinsi['id'] ?>"><?= $Provinsi['nama'] ?></option>
-                                        <?php endif; ?>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
-                        <?php endif; ?>
-
-                        <?php if (session()->get('role') == 'superadmin') : ?>
-                            <div class="mb-3">
-                                <label for="idProvinsi" class="form-label">Provinsi</label>
-                                <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="idProvinsi">
-                                    <option value="<?= $superAdminData['id'] ?>"><?= $superAdminData['nama'] ?></option>
-                                </select>
-                            </div>
-                        <?php endif; ?>
+                        <div class="mb-3">
+                            <label for="idProvinsi" class="form-label">Provinsi</label>
+                            <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="idKomunitas">
+                                <?php foreach ($listKomunitas as $komunitas) : ?>
+                                    <?php if ($komunitas['id'] == $arsip['idKomunitas']) : ?>
+                                        <option value="<?= $komunitas['id'] ?>" selected><?= $komunitas['nama'] ?></option>
+                                    <?php else : ?>
+                                        <option value="<?= $komunitas['id'] ?>"><?= $komunitas['nama'] ?></option>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
 
                         <div class="mb-3">
                             <label for="file" class="form-label">File</label>

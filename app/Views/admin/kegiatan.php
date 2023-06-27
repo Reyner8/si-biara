@@ -71,7 +71,7 @@
                                 <div class="mb-3">
                                     <label for="thumbnail" class="form-label">Thumbnail</label>
                                     <input class="form-control" type="file" id="thumbnail" name="thumbnail">
-                                    <p>Pilih beberapa foto untuk thumbnail... (biarkan kosong jika tidak update!!)</p>
+                                    <p>(biarkan kosong jika tidak update!!)</p>
                                 </div>
                                 <button class="btn btn-primary">Submit</button>
                             </form>

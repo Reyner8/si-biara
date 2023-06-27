@@ -23,7 +23,7 @@
                 <div class="card shadow p-3 mb-5 bg-body rounded">
                     <div class="card-body">
                         <h5 class="card-title">Forms</h5>
-                        <form action="/admin/kegiatan" method="post" enctype="multipart/form-data">
+                        <form action="/sa/kegiatan" method="post" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label for="judul" class="form-label">Judul Kegiatan</label>
                                 <input id="judul" type="text" class="form-control" name="judul" placeholder="Judul Kegiatan..." value="<?= old('judul') ?>">
@@ -41,6 +41,16 @@
                             </div>
 
                             <div class="mb-3">
+                                <label for="Komunitas" class="form-label">Komunitas</label>
+                                <select name="idKomunitas" id="idKomunitas" class="form-control">
+                                    <?php foreach ($listKomunitas as $komunitas) : ?>
+                                        <option value="<?= $komunitas['id'] ?>"><?= $komunitas['nama'] ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                                <p class="text-danger"><?= $validation->getError('idKomunitas') ?></p>
+                            </div>
+
+                            <div class="mb-3">
                                 <label for="thumbnail" class="form-label">Thumbnail</label>
                                 <input class="form-control" type="file" id="thumbnail" name="thumbnail">
                                 <p>Pilih beberapa foto untuk thumbnail...</p>
@@ -52,7 +62,7 @@
                     <div class="card shadow p-3 mb-5 bg-body rounded">
                         <div class="card-body">
                             <h5 class="card-title">Forms Update</h5>
-                            <form action="/admin/kegiatan/edit/<?= $dataEdit['id'] ?>" method="post" enctype="multipart/form-data">
+                            <form action="/sa/kegiatan/edit/<?= $dataEdit['id'] ?>" method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="_method" value="PUT">
                                 <div class="mb-3">
                                     <label for="judul" class="form-label">Judul Kegiatan</label>
@@ -68,6 +78,20 @@
                                     <label for="tanggal" class="form-label">Tanggal Kegiatan</label>
                                     <input id="tanggal" type="date" class="form-control" name="tanggal" value="<?= old('tanggal') ? old('tanggal') : $dataEdit['tanggal'] ?>">
                                     <p class="text-danger"> <?= $validation->getError('tanggal') ?></p>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="Komunitas" class="form-label">Komunitas</label>
+                                    <select name="idKomunitas" id="idKomunitas" class="form-control">
+                                        <?php foreach ($listKomunitas as $komunitas) : ?>
+                                            <?php if ($dataEdit['idKomunitas'] == $komunitas['id']) : ?>
+                                                <option value="<?= $komunitas['id'] ?>" selected><?= $komunitas['nama'] ?></option>
+                                            <?php else : ?>
+                                                <option value="<?= $komunitas['id'] ?>"><?= $komunitas['nama'] ?></option>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    </select>
+                                    <p class="text-danger"><?= $validation->getError('idKomunitas') ?></p>
                                 </div>
 
                                 <div class="mb-3">
@@ -104,13 +128,13 @@
                                             <td><?= $kegiatan['tanggal'] ?></td>
                                             <td><button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#modal-<?= $kegiatan['id'] ?>"><i class="fa fa-info"></i></button></td>
                                             <td>
-                                                <a class="btn btn-outline-info btn-sm" href="/admin/galeri/<?= $kegiatan['id'] ?>"><i class="fa fa-info"></i></a>
+                                                <a class="btn btn-outline-info btn-sm" href="/sa/galeri/<?= $kegiatan['id'] ?>"><i class="fa fa-info"></i></a>
 
                                             </td>
 
                                             <td>
-                                                <a class="btn btn-outline-warning btn-sm" href="/admin/kegiatan/edit/<?= $kegiatan['id'] ?>"><i class="fa fa-pencil"></i></a>
-                                                <form class="d-inline-block" action="/admin/kegiatan/<?= $kegiatan['id'] ?>" method="post">
+                                                <a class="btn btn-outline-warning btn-sm" href="/sa/kegiatan/edit/<?= $kegiatan['id'] ?>"><i class="fa fa-pencil"></i></a>
+                                                <form class="d-inline-block" action="/sa/kegiatan/<?= $kegiatan['id'] ?>" method="post">
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <button class="btn btn-outline-danger btn-sm"><i class="fa fa-trash"></i></button>
                                                 </form>

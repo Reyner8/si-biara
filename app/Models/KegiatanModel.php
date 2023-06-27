@@ -12,5 +12,5 @@ class KegiatanModel extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
-    protected $allowedFields = ['idAnggota', 'judul', 'deskripsi', 'tanggal', 'thumbnail'];
+    protected $allowedFields = ['idKomunitas', 'judul', 'deskripsi', 'tanggal', 'thumbnail'];
 }

@@ -97,9 +97,9 @@
                         <a class="nav-link active" aria-current="page" href="/sa/arsip">Berkas</a></a>
                     </li>
 
-                    <!-- <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/sa/provinsi">Provinsi</a></a>
-                    </li> -->
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Data
@@ -141,11 +141,13 @@
                 <?php endif; ?>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="/admin/anggota/profil">Setting</a></li>
+                <?php if (session()->get('role') != 'superuser') : ?>
+                    <li><a class="dropdown-item" href="/admin/anggota/profil">Setting</a></li>
 
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                <?php endif; ?>
                 <li><a class="dropdown-item" href="/auth/logout">Log-out</a></li>
             </ul>
         </div>

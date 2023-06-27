@@ -7,9 +7,8 @@
       <div class="col-lg-3">
 
         <div class="d-flex align-items-center mt-lg-5 mb-4">
-          <img class="img-fluid rounded-circle" width="50" height="50" src="/upload/profil/<?= $kegiatan['foto'] ?>" alt="<?= $kegiatan['foto'] ?>" />
           <div class="ms-3">
-            <div class="fw-bold"><?= $kegiatan['namaAnggota'] ?></div>
+            <div class="fw-bold"><?= $kegiatan['namaKomunitas'] ?></div>
             <div class="text-muted">-</div>
           </div>
         </div>

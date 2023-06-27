@@ -21,6 +21,13 @@
       border-collapse: collapse;
       width: 100%;
     }
+
+    .bord {
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      border-bottom: none;
+    }
   </style>
 </head>
 
@@ -28,7 +35,7 @@
 <body>
   <h1 style="text-align: center;"><?= $namaLaporan ?></h1>
 
-  <table class="table table-bordered">
+  <table class="table table-bordered color">
     <tr>
       <th>Nomor Baju</th>
       <th>Nama</th>
@@ -48,19 +55,23 @@
         <?php if ($hasil['idAnggota'] == $anggota['id']) : ?>
           <tr>
             <td></td>
-            <td colspan="4">
+            <td colspan="4" style="border-style: none;">
               <table>
                 <tr>
                   <th>Universitas</th>
                   <th>Fakultas</th>
                   <th>Prodi</th>
                   <th>Jenjang</th>
+                  <th>Semester</th>
+                  <th>Keterangan</th>
                 </tr>
                 <tr>
                   <td><?= $hasil['universitas'] ?></td>
                   <td><?= $hasil['fakultas'] ?></td>
                   <td><?= $hasil['prodi'] ?></td>
                   <td><?= $hasil['jenjang'] ?></td>
+                  <td><?= $hasil['semester'] ?></td>
+                  <td><?= $hasil['keterangan'] ?></td>
                 </tr>
               </table>
             </td>

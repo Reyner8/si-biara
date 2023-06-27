@@ -286,9 +286,39 @@
                                             <td>
                                                 <input class="form-control form-control-sm" type="file" aria-label=".form-control-sm example" name="file">
                                                 <p>Upload sesuai status!!</p>
+                                                <?php if ($modal['berkasTerkait']) : ?>
+                                                    <p>Berkas Sebelumnya. <a href="/upload/berkas/<?= $modal['berkasTerkait'] ?>">Buka</a> </p>
+                                                <?php endif; ?>
                                             </td>
                                         </tr>
 
+
+                                        <tr>
+                                            <th>Status</th>
+                                            <th>:</th>
+                                            <td>
+                                                <select name="status" id="status" class="form-control">
+                                                    <?php if ($modal['status'] == 'aktif') : ?>
+                                                        <option value="aktif" selected>Aktif</option>
+                                                        <option value="non-aktif">Non Aktif</option>
+                                                        <option value="eksklaustrasi">Eksklaustrasi</option>
+                                                        <option value="meninggal">Meninggal</option>
+                                                    <?php elseif ($modal['status'] == 'non-aktif') : ?>
+                                                        <option value="aktif">Aktif</option>
+                                                        <option value="non-aktif" selected>Non Aktif</option>
+                                                        <option value="eksklaustrasi">Eksklaustrasi</option>
+                                                        <option value="meninggal">Meninggal</option>
+                                                    <?php elseif ($modal['status'] == 'eksklaustrasi') : ?>
+                                                        <option value="aktif" selected>Aktif</option>
+                                                        <option value="non-aktif">Non Aktif</option>
+                                                        <option value="eksklaustrasi">Eksklaustrasi</option>
+                                                        <option value="meninggal">Meninggal</option>
+                                                    <?php else : ?>
+                                                        <option value="meninggal">Meninggal</option>
+                                                    <?php endif; ?>
+                                                </select>
+                                            </td>
+                                        </tr>
 
 
                                         <tr>
@@ -305,6 +335,14 @@
                                             <th>:</th>
                                             <td>
                                                 <input class="form-control form-control-sm" type="password" placeholder="Biarkan kosong jika tidak mengganti" aria-label=".form-control-sm example" name="password">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Tanggal Meninggal</th>
+                                            <th>:</th>
+                                            <td>
+                                                <input class="form-control form-control-sm" type="date" aria-label=".form-control-sm example" name="meninggal" value="<?= $modal['meninggal'] ?>">
+                                                <p>diisi jika anggota status meninggal</p>
                                             </td>
                                         </tr>
                                     </tbody>

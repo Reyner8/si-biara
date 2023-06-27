@@ -8,12 +8,14 @@ class Kegiatan extends BaseController
 {
     protected $KegiatanModel;
     protected $GaleriModel;
+    protected $RelationTable;
     protected $GaleriPath;
     protected $dataKegiatan;
 
     public function __construct()
     {
         $this->KegiatanModel = new \App\Models\KegiatanModel();
+        $this->RelationTable = new \App\Models\RelationTable();
         $this->GaleriModel = new \App\Models\GaleriModel();
         $this->GaleriPath = 'upload/galeri';
     }
@@ -24,7 +26,7 @@ class Kegiatan extends BaseController
             'judul' => 'Kegiatan Komunitas',
             'kegiatan' => $this->dataKegiatan,
             'validation' => \Config\Services::validation(),
-            'listKegiatan' => $this->KegiatanModel->where('idAnggota', session()->get('idAnggota'))->findAll(),
+            'listKegiatan' => $this->RelationTable->getKegiatanByIdKom(session()->get('komunitas')),
             'isEdit' => false
         ];
         return view('admin/kegiatan', $data);
@@ -36,7 +38,13 @@ class Kegiatan extends BaseController
         $deskripsi = $this->request->getPost('deskripsi');
         $tanggal = $this->request->getPost('tanggal');
         $thumbnail = $this->request->getFile('thumbnail');
-
+        // dd([
+        //     'idKomunitas' => session()->get('komunitas'),
+        //     'judul' =>  $judul,
+        //     'deskripsi' =>  $deskripsi,
+        //     'tanggal' =>  $tanggal,
+        //     // 'thumbnail' => $newName
+        // ]);
         if (!$this->validate([
             'judul' => 'required',
             'deskripsi' => 'required',
@@ -55,7 +63,7 @@ class Kegiatan extends BaseController
         }
 
         $this->KegiatanModel->insert([
-            'idAnggota' => session()->get('idAnggota'),
+            'idKomunitas' => session()->get('komunitas'),
             'judul' =>  $judul,
             'deskripsi' =>  $deskripsi,
             'tanggal' =>  $tanggal,
@@ -72,7 +80,7 @@ class Kegiatan extends BaseController
             'judul' => 'Kegiatan Komunitas',
             'kegiatan' => $this->dataKegiatan,
             'validation' => \Config\Services::validation(),
-            'listKegiatan' => $this->KegiatanModel->where('idAnggota', session()->get('idAnggota'))->findAll(),
+            'listKegiatan' => $this->RelationTable->getKegiatanByIdKom(session()->get('komunitas')),
             'dataEdit' => $this->KegiatanModel->find($id),
             'isEdit' => true
         ];
@@ -91,9 +99,7 @@ class Kegiatan extends BaseController
             'judul' => 'required',
             'deskripsi' => 'required',
             'tanggal' => 'required',
-            'thumbnail' => [
-                'uploaded[thumbnail]',
-            ],
+
         ])) {
             session()->setFlashdata('msg-danger', 'Data gagal diubah!!!');
             return redirect()->to('admin/kegiatan/edit/' . $id)->withInput();
@@ -121,8 +127,9 @@ class Kegiatan extends BaseController
 
     public function delete($id)
     {
+        // dd($id);
         $this->KegiatanModel->delete($id);
-
+        $this->GaleriModel->where('idKegiatan', $id)->delete();
         session()->setFlashdata('msg-success', 'Data berhasil dihapus !');
         return redirect()->to('admin/kegiatan');
     }

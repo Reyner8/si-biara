@@ -93,7 +93,7 @@
                                             <?php if ($lp['role'] == 'superadmin') : ?>
                                                 <?= 'Pimpinan Provinsi' ?>
                                             <?php elseif ($lp['role'] == 'admin') : ?>
-                                                <?= 'Pimpinan Provinsi' ?>
+                                                <?= 'Pimpinan Komunitas' ?>
                                             <?php else : ?>
                                                 <?= 'Anggota' ?>
                                             <?php endif; ?>
@@ -325,6 +325,24 @@
                             <label for="keterangan" class="form-label">Keterangan</label>
                             <textarea id="editPenugasan-1" class="form-control editPenugasan" name="keteranganPenugasan" cols="30" rows="10"><?= $editPenugasan['keterangan'] ?></textarea>
                             <p class="text-danger"><?= $validation->getError('keteranganPenugasan') ?></p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="role" class="form-label">Role</label>
+                            <select id="role" class="form-select" aria-label="Default select example" name="role">
+                                <?php if ($editPenugasan['role'] == 'superadmin') : ?>
+                                    <option value="user">Anggota</option>
+                                    <option value="superadmin" selected>Pimpinan Provinsi</option>
+                                    <option value="admin">Pimpinan Komunitas</option>
+                                <?php elseif ($editPenugasan['role'] == 'admin') : ?>
+                                    <option value="user">Anggota</option>
+                                    <option value="superadmin">Pimpinan Provinsi</option>
+                                    <option value="admin" selected>Pimpinan Komunitas</option>
+                                <?php else : ?>
+                                    <option value="user" selected>Anggota</option>
+                                    <option value="superadmin">Pimpinan Provinsi</option>
+                                    <option value="admin">Pimpinan Komunitas</option>
+                                <?php endif; ?>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label for="file" class="form-label">Berkas Penugasan</label>

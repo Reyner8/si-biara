@@ -137,6 +137,7 @@ class Anggota extends BaseController
         $tanggalLahir = $this->request->getPost('tanggalLahir');
         $nomorTelepon = $this->request->getPost('nomorTelepon');
         $password = $this->request->getPost('password');
+        $tanggalMeninggal = $this->request->getPost('meninggal');
         $anggota = $this->AnggotaModel->find($id);
         $foto = $this->request->getFile('foto');
         $newName = '';
@@ -173,7 +174,8 @@ class Anggota extends BaseController
             'tempatLahir' => $tempatLahir,
             'tanggalLahir' => $tanggalLahir,
             'nomorTelepon' => $nomorTelepon,
-            'foto' => $newName
+            'foto' => $newName,
+            'meninggal' => $tanggalMeninggal
         ]);
 
         session()->setFlashdata('msg', 'Data berhasil diubah!!!');
@@ -387,6 +389,8 @@ class Anggota extends BaseController
         $fakultas = $this->request->getPost('fakultas');
         $prodi = $this->request->getPost('prodi');
         $jenjang = $this->request->getPost('jenjang');
+        $semester = $this->request->getPost('semester');
+        $keterangan = $this->request->getPost('keterangan');
         $file = $this->request->getFile('file');
 
         $rules = [
@@ -414,7 +418,9 @@ class Anggota extends BaseController
             'universitas' => $universitas,
             'fakultas' => $fakultas,
             'prodi' => $prodi,
-            'status' => $jenjang,
+            'jenjang' => $jenjang,
+            'semester' => $semester,
+            'keterangan' => $keterangan,
             'file' => $newName,
         ]);
 

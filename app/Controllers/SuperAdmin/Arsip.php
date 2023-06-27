@@ -7,25 +7,25 @@ use App\Controllers\BaseController;
 class Arsip extends BaseController
 {
     protected $RelationTable;
-    protected $ArsipModel;
-    protected $ProvinsiModel;
+    protected $ArsipKomunitasModel;
+    protected $KomunitasModel;
 
     public function __construct()
     {
         $this->RelationTable = new \App\Models\RelationTable();
-        $this->ArsipModel = new \App\Models\ArsipModel();
-        $this->ProvinsiModel = new \App\Models\ProvinsiModel();
+        $this->ArsipKomunitasModel = new \App\Models\ArsipKomunitasModel();
+        $this->KomunitasModel = new \App\Models\KomunitasModel();
     }
 
     public function index()
     {
-        $superAdminData = (session()->get('role') == 'superadmin') ? $this->RelationTable->getProvinsiByIdKomunitas(session()->get('komunitas')) : '';
+        // $superAdminData = (session()->get('role') == 'superadmin') ? $this->RelationTable->getProvinsiByIdKomunitas(session()->get('komunitas')) : '';
         // dd($superAdminData);
         return view('superadmin/arsip', [
             'judul' => 'Arsip',
             'listArsip' => $this->RelationTable->getArsip(),
-            'listProvinsi' => $this->ProvinsiModel->findAll(),
-            'superAdminData' => $superAdminData,
+            'listKomunitas' => $this->KomunitasModel->findAll(),
+            // 'superAdminData' => $superAdminData,
             'validation' => \Config\Services::validation(),
         ]);
     }
@@ -37,15 +37,15 @@ class Arsip extends BaseController
         $nama = $this->request->getPost('nama');
         $tanggal = $this->request->getPost('tanggal');
         $jenisFile = $this->request->getPost('jenisFile');
-        $idProvinsi = $this->request->getPost('idProvinsi');
+        $idKomunitas = $this->request->getPost('idKomunitas');
         $file = $this->request->getFile('file');
 
-        // $idProvinsi = $this->RelationTable->getProvinsiByIdKomunitas(session()->get('komunitas'))['id'];
+        // $idKomunitas = $this->RelationTable->getProvinsiByIdKomunitas(session()->get('komunitas'))['id'];
         $rules = [
             'nama' => 'required',
             'tanggal' => 'required',
             'jenisFile' => 'required',
-            // 'idProvinsi' => 'required',
+            // 'idKomunitas' => 'required',
             'file' => [
                 'uploaded[file]',
             ],
@@ -62,9 +62,9 @@ class Arsip extends BaseController
             $file->move('upload/berkas', $newName);
         }
 
-        $arsip = $this->ArsipModel;
+        $arsip = $this->ArsipKomunitasModel;
         $arsip->insert([
-            'idProvinsi' => $idProvinsi,
+            'idKomunitas' => $idKomunitas,
             'nama' => $nama,
             'tanggal' => $tanggal,
             'jenisFile' => $jenisFile,
@@ -83,7 +83,7 @@ class Arsip extends BaseController
         $nama = $this->request->getPost('nama');
         $tanggal = $this->request->getPost('tanggal');
         $jenisFile = $this->request->getPost('jenisFile');
-        $idProvinsi = $this->request->getPost('idProvinsi');
+        $idKomunitas = $this->request->getPost('idKomunitas');
         $file = $this->request->getFile('file');
 
         // dd($jenisFile);
@@ -93,7 +93,7 @@ class Arsip extends BaseController
             'nama' => 'required',
             'tanggal' => 'required',
             'jenisFile' => 'required',
-            'idProvinsi' => 'required',
+            'idKomunitas' => 'required',
 
         ];
 
@@ -102,7 +102,7 @@ class Arsip extends BaseController
             return redirect()->to('sa/arsip')->withInput();
         }
 
-        $arsip = $this->ArsipModel->find($id);
+        $arsip = $this->ArsipKomunitasModel->find($id);
 
         if ($file == '') {
             $newName = $arsip['file'];
@@ -114,8 +114,8 @@ class Arsip extends BaseController
             unlink('upload/berkas/' . $arsip['file']);
         }
 
-        $this->ArsipModel->update($id, [
-            'idProvinsi' => $idProvinsi,
+        $this->ArsipKomunitasModel->update($id, [
+            'idKomunitas' => $idKomunitas,
             'nama' => $nama,
             'tanggal' => $tanggal,
             'jenisFile' => $jenisFile,
@@ -130,8 +130,8 @@ class Arsip extends BaseController
     // route : sa/arsip/(:num)
     public function delete($id)
     {
-        unlink('upload/berkas/' . $this->ArsipModel->find($id)['file']);
-        $this->ArsipModel->delete($id);
+        unlink('upload/berkas/' . $this->ArsipKomunitasModel->find($id)['file']);
+        $this->ArsipKomunitasModel->delete($id);
         session()->setFlashdata('msg', 'Data berhasil dihapus!!!');
         return redirect()->to('sa/arsip');
     }
